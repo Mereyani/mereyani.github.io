@@ -20,7 +20,7 @@ export default {
   },
   about: [
     "I'm a computer engineer based in Turkey. I'm in the first year of a thesis-based M.Sc. in Computer Engineering at Siirt University, where I completed my B.Sc. as the top-ranked student in the Faculty of Engineering.",
-    'For almost two years I worked on a Hospital Information Management System (HBYS) at Sinerji Bilişim (Bizmed): building modules and interface features in Delphi for hospital clients, fixing bugs, and designing the Oracle tables and queries behind them.',
+    'For almost two years I worked at Sinerji Bilişim on Bizmed HBYS, a hospital information system used in nearly 90 hospitals: building modules and interface features in Delphi for hospital clients, fixing bugs, and extending the Oracle database with new tables, columns and PL/SQL functions and procedures.',
     'Most of my own projects apply machine learning to real problems: convolutional networks for medical images and hand gestures, classical models on clinical data, and more recently multi-agent tools built on large language models.',
   ],
   experience: [
@@ -30,12 +30,12 @@ export default {
       org: 'Sinerji Bilişim (Bizmed)',
       where: 'Remote',
       points: [
-        'Developed custom core modules, features and interface controls in Delphi for the Hospital Information Management System (HBYS), based on hospital client requests.',
+        'Developed custom modules, features and interface controls in Delphi for Bizmed HBYS, a hospital information system used in nearly 90 hospitals, based on hospital client requests.',
+        'Extended the Oracle database behind new features: added tables, columns and PL/SQL functions, and modified existing functions and procedures.',
         'Found and fixed software bugs across the system.',
-        'Designed and implemented relational tables in Oracle, along with the backend queries and code that use them.',
         'Worked in a fully remote, task-based team.',
       ],
-      tags: ['Delphi', 'Oracle', 'SQL', 'HBYS'],
+      tags: ['Delphi', 'Oracle', 'PL/SQL', 'SQL', 'HBYS'],
     },
   ],
   education: [
@@ -54,7 +54,7 @@ export default {
   ],
   skills: [
     { group: 'Programming', items: ['Python', 'C#', 'Delphi', 'JavaScript'] },
-    { group: 'Databases', items: ['Oracle', 'PostgreSQL', 'Database design'] },
+    { group: 'Databases', items: ['Oracle', 'PL/SQL', 'PostgreSQL', 'Database design'] },
     {
       group: 'AI & data science',
       items: ['Deep learning (CNN)', 'Machine learning', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
@@ -70,7 +70,7 @@ export default {
   cv: {
     label: 'CV',
     summary:
-      'Computer engineer with almost two years of production experience on a hospital information system (Delphi, Oracle) and applied deep learning work on medical images, including an X-ray fracture classifier with 98.2% test accuracy. First-ranked graduate of Siirt University\'s Faculty of Engineering, now in a thesis-based M.Sc. in Computer Engineering.',
+      'Computer engineer with almost two years of production experience on Bizmed HBYS, a hospital information system used in nearly 90 hospitals (Delphi, Oracle PL/SQL), and applied deep learning work on medical images, including an X-ray fracture classifier with 98.2% test accuracy. First-ranked graduate of Siirt University\'s Faculty of Engineering, now in a thesis-based M.Sc. in Computer Engineering.',
     download: 'Download PDF',
     profile: 'Profile',
     location: 'Turkey',

@@ -20,7 +20,7 @@ export default {
   },
   about: [
     "Türkiye'de yaşayan bir bilgisayar mühendisiyim. Siirt Üniversitesi'nde tezli Bilgisayar Mühendisliği yüksek lisansının ilk yılındayım; lisansımı da aynı üniversitede Mühendislik Fakültesi birincisi olarak tamamladım.",
-    "Yaklaşık iki yıl boyunca Sinerji Bilişim'de (Bizmed) Hastane Bilgi Yönetim Sistemi (HBYS) üzerinde çalıştım: hastane müşterilerinin talepleri doğrultusunda Delphi ile modüller ve arayüz özellikleri geliştirdim, hataları giderdim, bunların arkasındaki Oracle tablolarını ve sorgularını tasarladım.",
+    'Yaklaşık iki yıl boyunca Sinerji Bilişim\'de, yaklaşık 90 hastanede kullanılan Bizmed HBYS üzerinde çalıştım: hastane müşterilerinin talepleri doğrultusunda Delphi ile modüller ve arayüz özellikleri geliştirdim, hataları giderdim ve Oracle veritabanını yeni tablolar, alanlar ve PL/SQL fonksiyon ve prosedürleriyle genişlettim.',
     'Kendi projelerimin çoğu makine öğrenmesini gerçek problemlere uyguluyor: tıbbi görüntüler ve el hareketleri için evrişimli sinir ağları, klinik veriler üzerinde klasik modeller ve son dönemde büyük dil modelleri üzerine kurulu çok ajanlı araçlar.',
   ],
   experience: [
@@ -30,12 +30,12 @@ export default {
       org: 'Sinerji Bilişim (Bizmed)',
       where: 'Uzaktan',
       points: [
-        'Hastane müşterilerinin talepleri doğrultusunda Hastane Bilgi Yönetim Sistemi (HBYS) için Delphi ile özel çekirdek modüller, özellikler ve arayüz butonları geliştirdim.',
+        'Hastane müşterilerinin talepleri doğrultusunda, yaklaşık 90 hastanede kullanılan Bizmed HBYS için Delphi ile özel modüller, özellikler ve arayüz butonları geliştirdim.',
+        'Yeni özelliklerin dayandığı Oracle veritabanını genişlettim: tablolar, alanlar ve PL/SQL fonksiyonları ekledim; mevcut fonksiyon ve prosedürleri düzenledim.',
         'Sistemdeki yazılım hatalarını tespit edip giderdim.',
-        'İlişkisel Oracle veritabanında tablolar tasarlayıp uyguladım; bunları kullanan backend sorgularını ve kodlarını yazdım.',
         'Tamamen uzaktan, görev tabanlı bir ekipte çalıştım.',
       ],
-      tags: ['Delphi', 'Oracle', 'SQL', 'HBYS'],
+      tags: ['Delphi', 'Oracle', 'PL/SQL', 'SQL', 'HBYS'],
     },
   ],
   education: [
@@ -54,7 +54,7 @@ export default {
   ],
   skills: [
     { group: 'Programlama dilleri', items: ['Python', 'C#', 'Delphi', 'JavaScript'] },
-    { group: 'Veritabanları', items: ['Oracle', 'PostgreSQL', 'Veritabanı tasarımı'] },
+    { group: 'Veritabanları', items: ['Oracle', 'PL/SQL', 'PostgreSQL', 'Veritabanı tasarımı'] },
     {
       group: 'Yapay zekâ ve veri bilimi',
       items: ['Derin öğrenme (CNN)', 'Makine öğrenmesi', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
@@ -70,7 +70,7 @@ export default {
   cv: {
     label: 'Özgeçmiş',
     summary:
-      'Hastane bilgi sistemi (Delphi, Oracle) üzerinde yaklaşık iki yıllık üretim deneyimine ve tıbbi görüntüler üzerinde uygulamalı derin öğrenme çalışmalarına sahip bilgisayar mühendisi; röntgen görüntülerinde test verisinde %98,2 doğrulukla çalışan bir kırık sınıflandırıcısı geliştirdi. Siirt Üniversitesi Mühendislik Fakültesi birincisi olarak mezun oldu; şu anda tezli Bilgisayar Mühendisliği yüksek lisansına devam ediyor.',
+      'Yaklaşık 90 hastanede kullanılan Bizmed HBYS (Delphi, Oracle PL/SQL) üzerinde yaklaşık iki yıllık üretim deneyimine ve tıbbi görüntüler üzerinde uygulamalı derin öğrenme çalışmalarına sahip bilgisayar mühendisi; röntgen görüntülerinde test verisinde %98,2 doğrulukla çalışan bir kırık sınıflandırıcısı geliştirdi. Siirt Üniversitesi Mühendislik Fakültesi birincisi olarak mezun oldu; şu anda tezli Bilgisayar Mühendisliği yüksek lisansına devam ediyor.',
     download: 'PDF indir',
     profile: 'Profil',
     location: 'Türkiye',
