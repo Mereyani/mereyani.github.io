@@ -24,6 +24,7 @@ const projectText = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
+    cv: z.string().optional(), // one-line version for the printed CV
     coverAlt: z.string().optional(),
     role: z.array(z.string()).default([]),
     highlights: z.array(z.string()).default([]),

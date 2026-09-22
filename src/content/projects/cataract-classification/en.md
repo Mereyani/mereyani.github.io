@@ -4,6 +4,7 @@ summary: A screening model that tells immature from mature cataracts in eye imag
 coverAlt: Close-up eye photographs from the dataset, each labelled immature or mature cataract.
 highlights:
   - 86.6% accuracy and a 0.87 weighted F1 score on 82 held-out test images.
+cv: "VGG16 with custom CNN layers telling immature from mature cataract: 86.6% accuracy on 82 test images."
 ---
 
 An automated screening system that classifies eye images by cataract stage: immature or mature.

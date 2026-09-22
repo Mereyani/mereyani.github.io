@@ -5,6 +5,7 @@ coverAlt: Eğitim verisinden bilek, el ve önkol röntgenleri; her biri kırık 
 highlights:
   - 506 ayrılmış test röntgeninde %98,2 doğruluk ve 0,98 ağırlıklı F1 skoru.
   - 506 test görüntüsünden yalnızca 9'u yanlış sınıflandırıldı.
+cv: "Bitirme projesi. VGG16 transfer öğrenmeli CNN: 506 test röntgeninde %98,2 doğruluk ve 0,98 F1."
 ---
 
 Lisans bitirme projem: Python'da TensorFlow ve Keras ile geliştirilmiş, bir röntgende kırık olup olmadığına karar veren ikili bir sınıflandırıcı.

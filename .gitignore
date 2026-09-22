@@ -8,3 +8,7 @@ dist/
 .impeccable/live/
 .impeccable/config.local.json
 .impeccable/questions/
+# Private CV data (phone, references) and its outputs never leave this machine.
+src/data/private.local.json
+.private-dist/
+private/

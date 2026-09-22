@@ -4,5 +4,6 @@ export const site = {
   url: 'https://mereyani.github.io',
   email: 'mereyani.bs@gmail.com',
   github: 'https://github.com/Mereyani',
-  linkedin: undefined as string | undefined, // TODO(owner): LinkedIn URL not provided yet
+  linkedin: 'https://www.linkedin.com/in/mohamed-mereyani-89a7a130a',
+  kaggle: 'https://www.kaggle.com/mereyani',
 };

@@ -10,6 +10,9 @@ export const dicts = { en, ar, tr };
 export const langNames: Record<Locale, string> = { en: 'English', ar: 'العربية', tr: 'Türkçe' };
 export const ogLocales: Record<Locale, string> = { en: 'en_US', ar: 'ar_AR', tr: 'tr_TR' };
 
+/** Plain separator lists: Intl.ListFormat would add «و» / "and" before tech names. */
+export const joinList = (locale: Locale, items: string[]) => items.join(locale === 'ar' ? '، ' : ', ');
+
 export const dir = (locale: Locale) => (locale === 'ar' ? 'rtl' : 'ltr');
 
 /** localePath('ar', 'projects/jobpilot') -> '/ar/projects/jobpilot/' */

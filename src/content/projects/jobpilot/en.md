@@ -1,6 +1,7 @@
 ---
 title: JobPilot
 summary: A multi-agent system that finds matching jobs, sends a tailored application to a real contact email and handles the replies, all from a local dashboard.
+cv: "Multi-agent job-search pipeline: resume parsing, LLM-generated search keywords, 0–100 job matching, tailored applications and reply handling."
 ---
 
 JobPilot turns a resume into a job search pipeline. Five agents, each a separate module, are coordinated by one orchestrator:

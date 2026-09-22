@@ -18,7 +18,7 @@ interface Props {
 
 const { locale, path = '', title, description, jsonld, noindex = false } = Astro.props;
 const t = dicts[locale];
-const pageTitle = title ? `${title} — ${site.name}` : t.meta.title;
+const pageTitle = title ? `${title} — ${t.name}` : t.meta.title;
 const pageDescription = description ?? t.meta.description;
 const url = (l: Locale) => new URL(localePath(l, path), site.url).href;
 ---

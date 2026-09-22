@@ -1,5 +1,6 @@
 // Every locale file must fill every field, so a missing translation fails `astro check`.
 export interface Dict {
+  name: string;
   meta: { title: string; description: string };
   title: string;
   tagline: string;
@@ -9,6 +10,15 @@ export interface Dict {
   education: { period: string; degree: string; org: string; notes: string[] }[];
   skills: { group: string; items: string[] }[];
   languages: { name: string; level: string }[];
+  cv: {
+    label: string;
+    summary: string;
+    download: string;
+    profile: string;
+    location: string;
+    references: string;
+    referencesNote: string;
+  };
   ui: {
     skip: string;
     sections: string;

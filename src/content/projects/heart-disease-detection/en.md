@@ -5,6 +5,7 @@ coverAlt: "Naive Bayes confusion matrix on 238 test records: 95 and 105 correct,
 highlights:
   - "Naive Bayes: 84.0% accuracy on 238 held-out records."
   - "K-Nearest Neighbors: 79.8% accuracy on the same test set."
+cv: "KNN and Naive Bayes on 1,190 clinical records; Naive Bayes reached 84.0% test accuracy."
 ---
 
 - Processed and normalised a clinical dataset of 1,190 patient records with Python, Pandas and scikit-learn, encoding the categorical columns.

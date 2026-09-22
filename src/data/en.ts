@@ -1,6 +1,7 @@
 import type { Dict } from './types';
 
 export default {
+  name: 'Mohamed Mereyani',
   meta: {
     title: 'Mohamed Mereyani — Computer Engineer',
     description:
@@ -64,8 +65,18 @@ export default {
   languages: [
     { name: 'Arabic', level: 'Native' },
     { name: 'Turkish', level: 'Fluent' },
-    { name: 'English', level: 'Intermediate' },
+    { name: 'English', level: 'Intermediate (B1–B2)' },
   ],
+  cv: {
+    label: 'CV',
+    summary:
+      'Computer engineer with almost two years of production experience on a hospital information system (Delphi, Oracle) and applied deep learning work on medical images, including an X-ray fracture classifier with 98.2% test accuracy. First-ranked graduate of Siirt University\'s Faculty of Engineering, now in a thesis-based M.Sc. in Computer Engineering.',
+    download: 'Download PDF',
+    profile: 'Profile',
+    location: 'Turkey',
+    references: 'References',
+    referencesNote: 'Available on request.',
+  },
   ui: {
     skip: 'Skip to content',
     sections: 'Sections',

@@ -1,6 +1,7 @@
 import type { Dict } from './types';
 
 export default {
+  name: 'Mohamed Mereyani',
   meta: {
     title: 'Mohamed Mereyani — Bilgisayar Mühendisi',
     description:
@@ -42,13 +43,13 @@ export default {
       period: '2026 — Devam ediyor',
       degree: 'Bilgisayar Mühendisliği Yüksek Lisans (Tezli)',
       org: 'Siirt Üniversitesi, Fen Bilimleri Enstitüsü',
-      notes: ['Not ortalaması 86.75 / 100'],
+      notes: ['Not ortalaması 86,75 / 100'],
     },
     {
       period: '2021 — 2025',
       degree: 'Bilgisayar Mühendisliği Lisans',
       org: 'Siirt Üniversitesi',
-      notes: ['Mühendislik Fakültesi birincisi', 'Not ortalaması 3.56 / 4.00'],
+      notes: ['Mühendislik Fakültesi birincisi', 'Not ortalaması 3,56 / 4,00'],
     },
   ],
   skills: [
@@ -64,8 +65,18 @@ export default {
   languages: [
     { name: 'Arapça', level: 'Ana dil' },
     { name: 'Türkçe', level: 'İleri' },
-    { name: 'İngilizce', level: 'Orta' },
+    { name: 'İngilizce', level: 'Orta (B1–B2)' },
   ],
+  cv: {
+    label: 'Özgeçmiş',
+    summary:
+      'Hastane bilgi sistemi (Delphi, Oracle) üzerinde yaklaşık iki yıllık üretim deneyimine ve tıbbi görüntüler üzerinde uygulamalı derin öğrenme çalışmalarına sahip bilgisayar mühendisi; röntgen görüntülerinde test verisinde %98,2 doğrulukla çalışan bir kırık sınıflandırıcısı geliştirdi. Siirt Üniversitesi Mühendislik Fakültesi birincisi olarak mezun oldu; şu anda tezli Bilgisayar Mühendisliği yüksek lisansına devam ediyor.',
+    download: 'PDF indir',
+    profile: 'Profil',
+    location: 'Türkiye',
+    references: 'Referanslar',
+    referencesNote: 'Talep üzerine sunulur.',
+  },
   ui: {
     skip: 'İçeriğe geç',
     sections: 'Bölümler',

@@ -1,6 +1,7 @@
 ---
 title: install-from-video
 summary: A Claude Code skill that turns a video recommending developer tools into verified install commands. Transcribed locally, checked against npm and GitHub, never auto-installed.
+cv: "Claude Code skill that turns tool-recommendation videos into verified install commands, with local transcription and npm/GitHub checks."
 ---
 
 "Top 5 tools" videos rarely include links. Typing a name you heard puts you one letter away from a typosquat, and a plugin you install runs its hooks in every session afterwards. This skill closes that gap.

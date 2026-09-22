@@ -1,0 +1,142 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import LangSwitch from '../../components/LangSwitch.astro';
+import { dicts, joinList, localeParams, localePath, type Locale } from '../../i18n';
+import { getProjects } from '../../lib/projects';
+import { site } from '../../data/site';
+
+export const getStaticPaths = localeParams;
+
+type Reference = { name: string; role: string; phone?: string; email: string };
+type Private = { phone: string; references: Record<Locale, Reference[]> };
+
+const { locale } = Astro.props as { locale: Locale };
+const t = dicts[locale];
+const projects = await getProjects(locale);
+
+// Phone and references only appear in the local `npm run cv` private build, never on the public site.
+const privateFile = Object.values(import.meta.glob<Private>('../../data/private.local.json', { eager: true, import: 'default' }))[0];
+const priv = process.env.CV_PRIVATE ? privateFile : undefined;
+
+const bare = (url: string) => url.replace(/^https:\/\/(www\.)?/, '');
+const pdf = `/cv/Mohamed-Mereyani-CV-${locale.toUpperCase()}.pdf`;
+---
+
+<Layout locale={locale} path="cv" title={t.cv.label} description={t.cv.summary}>
+  <div class="cv-page">
+    <nav class="cv-bar" aria-label={t.cv.label}>
+      <a class="back" href={localePath(locale)}><Icon name="back" />{t.ui.back}</a>
+      <LangSwitch locale={locale} path="cv" />
+      <a class="cv-dl" href={pdf} download>{t.cv.download}</a>
+    </nav>
+
+    <main id="content">
+      <article class="cv">
+        <header>
+          <h1>{t.name}</h1>
+          {t.name !== site.name && <p class="cv-alt"><bdi lang="en">{site.name}</bdi></p>}
+          <p class="cv-title">{t.title}</p>
+          <ul class="cv-contact">
+            <li>{t.cv.location}</li>
+            <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+            {priv && <li><bdi dir="ltr">{priv.phone}</bdi></li>}
+            <li><a href={site.url}>{bare(site.url)}</a></li>
+            <li><a href={site.linkedin}>{bare(site.linkedin)}</a></li>
+            <li><a href={site.github}>{bare(site.github)}</a></li>
+            <li><a href={site.kaggle}>{bare(site.kaggle)}</a></li>
+          </ul>
+        </header>
+
+        <section>
+          <h2>{t.cv.profile}</h2>
+          <p>{t.cv.summary}</p>
+        </section>
+
+        <section>
+          <h2>{t.nav.experience}</h2>
+          {
+            t.experience.map((job) => (
+              <div class="cv-item">
+                <div class="cv-head">
+                  <h3>{job.role} <span class="cv-meta">· {job.org} · {job.where}</span></h3>
+                  <p class="cv-when">{job.period}</p>
+                </div>
+                <ul class="cv-points">{job.points.map((p) => <li>{p}</li>)}</ul>
+              </div>
+            ))
+          }
+        </section>
+
+        <section>
+          <h2>{t.nav.projects}</h2>
+          {
+            projects.map((p) => (
+              <div class="cv-item">
+                <div class="cv-head">
+                  <h3>
+                    <a href={new URL(localePath(locale, `projects/${p.slug}`), site.url).href}>{p.text.data.title}</a>{' '}
+                    <span class="cv-tags" dir="ltr">{p.tags.join(', ')}</span>
+                  </h3>
+                  {p.year && <p class="cv-when">{p.year}</p>}
+                </div>
+                <p>{p.text.data.cv ?? p.text.data.summary}</p>
+              </div>
+            ))
+          }
+        </section>
+
+        <section>
+          <h2>{t.nav.education}</h2>
+          {
+            t.education.map((e) => (
+              <div class="cv-item">
+                <div class="cv-head">
+                  <h3>{e.degree}</h3>
+                  <p class="cv-when">{e.period}</p>
+                </div>
+                <p><span class="cv-meta">{e.org}</span> · {e.notes.join(' · ')}</p>
+              </div>
+            ))
+          }
+        </section>
+
+        <section>
+          <h2>{t.nav.skills}</h2>
+          <dl class="cv-skills">
+            {
+              t.skills.map((s) => (
+                <>
+                  <dt>{s.group}</dt>
+                  <dd>{joinList(locale, s.items)}</dd>
+                </>
+              ))
+            }
+            <dt>{t.ui.languages}</dt>
+            <dd>{t.languages.map((l) => `${l.name}: ${l.level}`).join(' · ')}</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>{t.cv.references}</h2>
+          {
+            priv ? (
+              <div class="cv-refs">
+                {priv.references[locale].map((r) => (
+                  <p>
+                    <strong>{r.name}</strong> · {r.role}
+                    <br />
+                    {r.phone && <><bdi dir="ltr">{r.phone}</bdi> · </>}
+                    <a href={`mailto:${r.email}`}><bdi dir="ltr">{r.email}</bdi></a>
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p>{t.cv.referencesNote}</p>
+            )
+          }
+        </section>
+      </article>
+    </main>
+  </div>
+</Layout>

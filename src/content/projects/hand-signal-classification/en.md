@@ -1,6 +1,7 @@
 ---
 title: Hand Signal Classification
 summary: Real-time hand gesture recognition with a CNN and OpenCV, with every prediction shown instantly on an Arduino-driven LCD.
+cv: "Real-time gesture recognition (CNN, OpenCV) trained on a self-collected dataset; predictions shown on an Arduino-driven LCD over serial."
 ---
 
 - Trained a real-time gesture recognition model with Python, a convolutional neural network (CNN) and OpenCV.

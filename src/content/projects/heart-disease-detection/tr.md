@@ -5,6 +5,7 @@ coverAlt: "238 test kaydı için Naive Bayes karışıklık matrisi: 95 ve 105 d
 highlights:
   - "Naive Bayes: 238 ayrılmış kayıtta %84,0 doğruluk."
   - "K-En Yakın Komşu: aynı test setinde %79,8 doğruluk."
+cv: "1.190 klinik kayıt üzerinde KNN ve Naive Bayes; Naive Bayes testte %84,0 doğruluğa ulaştı."
 ---
 
 - 1.190 hasta kaydından oluşan klinik bir veri setini Python, Pandas ve scikit-learn ile işleyip normalize ettim; kategorik sütunları kodladım.

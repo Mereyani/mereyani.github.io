@@ -1,6 +1,7 @@
 ---
 title: install-from-video
 summary: Geliştirici araçları öneren bir videoyu doğrulanmış kurulum komutlarına dönüştüren bir Claude Code becerisi. Yerelde transkript edilir, npm ve GitHub üzerinden kontrol edilir, asla otomatik kurulum yapılmaz.
+cv: "Araç öneren videoları doğrulanmış kurulum komutlarına dönüştüren Claude Code becerisi; yerel transkripsiyon ve npm/GitHub kontrolü."
 ---
 
 "En iyi 5 araç" videolarında nadiren bağlantı bulunur. Duyduğunuz bir ismi yazmak sizi bir typosquat paketinden tek harf uzağa koyar ve kurduğunuz bir eklenti sonraki her oturumda kendi hook'larını çalıştırır. Bu beceri o boşluğu kapatır.

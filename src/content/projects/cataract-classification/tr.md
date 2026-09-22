@@ -4,6 +4,7 @@ summary: Göz görüntülerinde olgunlaşmamış ve olgun kataraktı ayırt eden
 coverAlt: Veri setinden yakın çekim göz fotoğrafları; her biri olgunlaşmamış veya olgun katarakt olarak etiketli.
 highlights:
   - 82 ayrılmış test görüntüsünde %86,6 doğruluk ve 0,87 ağırlıklı F1 skoru.
+cv: "Olgunlaşmamış ve olgun kataraktı ayıran VGG16 ve özel CNN katmanları: 82 test görüntüsünde %86,6 doğruluk."
 ---
 
 Göz görüntülerini katarakt evresine göre (olgunlaşmamış veya olgun) sınıflandıran otomatik bir tarama sistemi.

@@ -5,6 +5,7 @@ coverAlt: Wrist, hand and forearm X-rays from the training data, each labelled f
 highlights:
   - 98.2% accuracy and a 0.98 weighted F1 score on 506 held-out test X-rays.
   - Only 9 of the 506 test images misclassified.
+cv: "Graduation project. VGG16 transfer-learning CNN: 98.2% accuracy and 0.98 F1 on 506 held-out X-rays."
 ---
 
 My B.Sc. graduation project: a binary classifier, built in Python with TensorFlow and Keras, that decides whether an X-ray shows a fracture.

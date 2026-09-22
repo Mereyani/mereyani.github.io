@@ -6,7 +6,6 @@ import Icon from '../../../components/Icon.astro';
 import LangSwitch from '../../../components/LangSwitch.astro';
 import { dicts, localeParams, localePath, type Locale } from '../../../i18n';
 import { getProjects } from '../../../lib/projects';
-import { site } from '../../../data/site';
 
 type Project = Awaited<ReturnType<typeof getProjects>>[number];
 
@@ -99,7 +98,7 @@ const links = [
     </main>
 
     <footer class="foot">
-      <a href={localePath(locale)}>{site.name}</a>
+      <a href={localePath(locale)}>{t.name}</a>
     </footer>
   </div>
 </Layout>

@@ -59,6 +59,21 @@ The home page list, the project page, the sitemap and the language links update 
 
 Edit the same fields in `src/data/en.ts`, `ar.ts` and `tr.ts`. A new job is a new object at the top of the `experience` array in each file.
 
+## CV
+
+`/cv/` (and `/ar/cv/`, `/tr/cv/`) is a one-page A4 CV built from the same data as the site, so it updates with every content change. Projects use their optional `cv:` one-liner from the Markdown frontmatter.
+
+After changing content, regenerate the PDFs (needs Google Chrome):
+
+```bash
+npm run cv
+```
+
+- `public/cv/Mohamed-Mereyani-CV-{EN,AR,TR}.pdf`: public versions, linked from `/cv/`. Commit these.
+- `private/Mohamed-Mereyani-CV-{EN,AR,TR}-full.pdf`: full versions with phone and references, read from `src/data/private.local.json`. Both are gitignored and never published.
+
+The script fails if any PDF runs past one page.
+
 ## Deploy
 
 Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages.
