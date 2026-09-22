@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mereyani.github.io/sitemap-index.xml

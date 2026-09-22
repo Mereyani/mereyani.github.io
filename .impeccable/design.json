@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-22T00:00:00Z",
+  "title": "Design System: Mohamed Mereyani",
+  "extensions": {
+    "colorMeta": {
+      "teal": {
+        "role": "primary",
+        "displayName": "Record Teal",
+        "canonical": "#0f766e",
+        "tonalRamp": [
+          "#042f2e",
+          "#134e4a",
+          "#115e59",
+          "#0f766e",
+          "#0d9488",
+          "#2dd4bf",
+          "#99f6e4",
+          "#f0fdfa"
+        ]
+      },
+      "teal-dark": {
+        "role": "primary",
+        "displayName": "Record Teal (dark)",
+        "canonical": "#2dd4bf",
+        "tonalRamp": [
+          "#042f2e",
+          "#134e4a",
+          "#115e59",
+          "#0f766e",
+          "#0d9488",
+          "#2dd4bf",
+          "#99f6e4",
+          "#f0fdfa"
+        ]
+      },
+      "teal-wash": {
+        "role": "primary",
+        "displayName": "Teal Wash",
+        "canonical": "rgb(15 118 110 / 0.08)",
+        "tonalRamp": [
+          "#042f2e",
+          "#134e4a",
+          "#115e59",
+          "#0f766e",
+          "#0d9488",
+          "#2dd4bf",
+          "#99f6e4",
+          "#f0fdfa"
+        ]
+      },
+      "teal-wash-dark": {
+        "role": "primary",
+        "displayName": "Teal Wash (dark)",
+        "canonical": "rgb(45 212 191 / 0.1)",
+        "tonalRamp": [
+          "#042f2e",
+          "#134e4a",
+          "#115e59",
+          "#0f766e",
+          "#0d9488",
+          "#2dd4bf",
+          "#99f6e4",
+          "#f0fdfa"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#fafafa",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#0a0a0a",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#4b4b4b",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "pewter": {
+        "role": "neutral",
+        "displayName": "Pewter",
+        "canonical": "#6b6b6b",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#e4e4e4",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "paper-dark": {
+        "role": "neutral",
+        "displayName": "Paper (dark)",
+        "canonical": "#0a0a0a",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Surface (dark)",
+        "canonical": "#121212",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Ink (dark)",
+        "canonical": "#ededed",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "graphite-dark": {
+        "role": "neutral",
+        "displayName": "Graphite (dark)",
+        "canonical": "#a8a8a8",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "pewter-dark": {
+        "role": "neutral",
+        "displayName": "Pewter (dark)",
+        "canonical": "#8c8c8c",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      },
+      "hairline-dark": {
+        "role": "neutral",
+        "displayName": "Hairline (dark)",
+        "canonical": "#262626",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#4b4b4b",
+          "#6b6b6b",
+          "#8c8c8c",
+          "#a8a8a8",
+          "#e4e4e4",
+          "#fafafa"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The owner's name in the identity column; once per page."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Project page title."
+      },
+      "title-lg": {
+        "displayName": "Title Large",
+        "purpose": "Role line, project lede, prose subheads (at 600)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Row titles: job, project, degree."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text; 1.9 line-height in Arabic; measure 40rem."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Organisation lines, facts terms, back and external links."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase tracked in-page nav items and mobile section h2s only; 0.875rem untracked in Arabic."
+      },
+      "mono-meta": {
+        "displayName": "Mono Meta",
+        "purpose": "Dates in the row gutter and the project year."
+      },
+      "mono-tag": {
+        "displayName": "Mono Tag",
+        "purpose": "Tech tag pills."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Expo-out easing for row, arrow, image-outline and nav-line transitions."
+      },
+      {
+        "name": "duration-color",
+        "value": "0.2s",
+        "purpose": "Link and text color changes."
+      },
+      {
+        "name": "duration-row",
+        "value": "0.3s",
+        "purpose": "Row surface, sibling dimming, arrow nudge, image outline."
+      },
+      {
+        "name": "duration-navline",
+        "value": "0.4s",
+        "purpose": "Nav line growth."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "row-gutter",
+        "value": "40rem"
+      },
+      {
+        "name": "two-column",
+        "value": "64rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Tech Tag",
+      "kind": "chip",
+      "refersTo": "tag-pill",
+      "description": "Neutral hairline pill for technologies; static, never accented.",
+      "html": "<ul class=\"ds-tags\"><li>Python</li><li>TensorFlow</li><li>VGG16</li></ul>",
+      "css": ":host{--bg:#fafafa;--surface:#fff;--fg:#0a0a0a;--muted:#4b4b4b;--faint:#6b6b6b;--line:#e4e4e4;--accent:#0f766e;--accent-bg:rgb(15 118 110 / .08);--sans:'Geist Variable','Noto Sans Arabic Variable',ui-sans-serif,system-ui,sans-serif;--mono:'Geist Mono Variable','Noto Sans Arabic Variable',ui-monospace,'SF Mono',Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:0;padding:0}.ds-tags li{padding:.3rem .625rem;border-radius:99rem;box-shadow:inset 0 0 0 1px var(--line);color:var(--muted);font:500 .75rem/1.4 var(--mono)}"
+    },
+    {
+      "name": "Project Row",
+      "kind": "card",
+      "refersTo": "row-linked",
+      "description": "Whole-row link with image gutter; flat surface on hover, teal title and arrow nudge.",
+      "html": "<div class=\"ds-row\"><div class=\"ds-thumb\"></div><div><h3><a class=\"ds-stretch\" href=\"#\">Bone Fracture Classification <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a></h3><p class=\"ds-meta\">2025</p><p class=\"ds-sum\">A deep learning model that classifies X-rays as fractured or not fractured.</p></div></div>",
+      "css": ":host{--bg:#fafafa;--surface:#fff;--fg:#0a0a0a;--muted:#4b4b4b;--faint:#6b6b6b;--line:#e4e4e4;--accent:#0f766e;--accent-bg:rgb(15 118 110 / .08);--sans:'Geist Variable','Noto Sans Arabic Variable',ui-sans-serif,system-ui,sans-serif;--mono:'Geist Mono Variable','Noto Sans Arabic Variable',ui-monospace,'SF Mono',Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-row{position:relative;display:grid;grid-template-columns:9rem minmax(0,1fr);gap:1.5rem;padding:1.25rem;border-radius:.625rem;background:var(--bg);color:var(--muted);font:400 1rem/1.7 var(--sans);transition:background-color .3s var(--ease)}.ds-row:hover,.ds-row:focus-within{background:var(--surface)}.ds-row:has(.ds-stretch:focus-visible){outline:2px solid var(--accent);outline-offset:2px}.ds-thumb{aspect-ratio:926/636;margin-top:.25rem;border-radius:.375rem;background:var(--line);outline:1px solid var(--line);outline-offset:-1px;transition:outline-color .3s var(--ease)}.ds-row:hover .ds-thumb{outline-color:var(--accent)}.ds-row h3{margin:0;color:var(--fg);font-size:1rem;font-weight:550;line-height:1.45}.ds-stretch{display:inline-flex;align-items:center;gap:.375rem;color:inherit;text-decoration:none;transition:color .2s}.ds-stretch:focus-visible{outline:none}.ds-stretch::after{content:'';position:absolute;inset:0;border-radius:inherit}.ds-row:hover .ds-stretch{color:var(--accent)}.ds-arrow{transition:translate .3s var(--ease)}.ds-row:hover .ds-arrow{translate:.125rem -.125rem}.ds-meta{margin:0;color:var(--faint);font:.8125rem/1.5 var(--mono);font-variant-numeric:tabular-nums}.ds-sum{margin:.375rem 0 0}"
+    },
+    {
+      "name": "Experience Row",
+      "kind": "custom",
+      "refersTo": "row-linked",
+      "description": "Plain record row: mono date in the gutter, title, organisation, points.",
+      "html": "<div class=\"ds-erow\"><p class=\"ds-when\">07/2024 – 04/2026</p><div><h3>Software &amp; Database Specialist</h3><p class=\"ds-where\">Sinerji Bilişim (Bizmed) · Remote</p><ul><li>Built modules for a hospital information system.</li></ul></div></div>",
+      "css": ":host{--bg:#fafafa;--surface:#fff;--fg:#0a0a0a;--muted:#4b4b4b;--faint:#6b6b6b;--line:#e4e4e4;--accent:#0f766e;--accent-bg:rgb(15 118 110 / .08);--sans:'Geist Variable','Noto Sans Arabic Variable',ui-sans-serif,system-ui,sans-serif;--mono:'Geist Mono Variable','Noto Sans Arabic Variable',ui-monospace,'SF Mono',Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-erow{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:1.5rem;color:var(--muted);font:400 1rem/1.7 var(--sans)}.ds-erow p{margin:0}.ds-when{padding-top:.2rem;color:var(--faint);font:.75rem/1.5 var(--mono);font-variant-numeric:tabular-nums}.ds-erow h3{margin:0;color:var(--fg);font-size:1rem;font-weight:550;line-height:1.45}.ds-where{color:var(--faint);font-size:.875rem}.ds-erow ul{margin:.875rem 0 0;padding-inline-start:1.1rem}.ds-erow li::marker{color:var(--faint)}"
+    },
+    {
+      "name": "In-page Nav",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Uppercase nav with a hairline that grows for the active section; only the active line is teal.",
+      "html": "<nav class=\"ds-toc\"><ol><li><a href=\"#\" aria-current=\"true\">About</a></li><li><a href=\"#\">Experience</a></li><li><a href=\"#\">Projects</a></li></ol></nav>",
+      "css": ":host{--bg:#fafafa;--surface:#fff;--fg:#0a0a0a;--muted:#4b4b4b;--faint:#6b6b6b;--line:#e4e4e4;--accent:#0f766e;--accent-bg:rgb(15 118 110 / .08);--sans:'Geist Variable','Noto Sans Arabic Variable',ui-sans-serif,system-ui,sans-serif;--mono:'Geist Mono Variable','Noto Sans Arabic Variable',ui-monospace,'SF Mono',Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-toc ol{display:grid;list-style:none;margin:0;padding:0}.ds-toc a{display:inline-flex;align-items:center;gap:1rem;padding-block:.625rem;color:var(--faint);font:600 .75rem var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:color .2s}.ds-toc a::before{content:'';width:4rem;height:1px;background:currentColor;scale:.5 1;transform-origin:left;transition:scale .4s var(--ease)}.ds-toc a:hover,.ds-toc a[aria-current]{color:var(--fg)}.ds-toc a:hover::before,.ds-toc a[aria-current]::before{scale:1 1}.ds-toc a[aria-current]::before{background:var(--accent)}.ds-toc a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}"
+    },
+    {
+      "name": "Language Switch",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Native-script locale names; current is ink at 600.",
+      "html": "<ul class=\"ds-langs\"><li><a href=\"#\" aria-current=\"page\">English</a></li><li><a href=\"#\" lang=\"ar\">العربية</a></li><li><a href=\"#\" lang=\"tr\">Türkçe</a></li></ul>",
+      "css": ":host{--bg:#fafafa;--surface:#fff;--fg:#0a0a0a;--muted:#4b4b4b;--faint:#6b6b6b;--line:#e4e4e4;--accent:#0f766e;--accent-bg:rgb(15 118 110 / .08);--sans:'Geist Variable','Noto Sans Arabic Variable',ui-sans-serif,system-ui,sans-serif;--mono:'Geist Mono Variable','Noto Sans Arabic Variable',ui-monospace,'SF Mono',Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-langs{display:flex;gap:1rem;list-style:none;margin:0;padding:0;font:.8125rem var(--sans)}.ds-langs a{display:block;padding-block:.25rem;color:var(--faint);text-decoration:none;transition:color .2s}.ds-langs a:hover,.ds-langs a[aria-current]{color:var(--fg)}.ds-langs a[aria-current]{font-weight:600}.ds-langs a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}"
+    },
+    {
+      "name": "External Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Ink link with hairline underline that turns teal on hover.",
+      "html": "<a class=\"ds-ext\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg>Kaggle notebook</a>",
+      "css": ":host{--bg:#fafafa;--surface:#fff;--fg:#0a0a0a;--muted:#4b4b4b;--faint:#6b6b6b;--line:#e4e4e4;--accent:#0f766e;--accent-bg:rgb(15 118 110 / .08);--sans:'Geist Variable','Noto Sans Arabic Variable',ui-sans-serif,system-ui,sans-serif;--mono:'Geist Mono Variable','Noto Sans Arabic Variable',ui-monospace,'SF Mono',Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-ext{display:inline-flex;align-items:center;gap:.5rem;color:var(--fg);font:500 .875rem var(--sans);text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:.22em;transition:text-decoration-color .2s}.ds-ext:hover{text-decoration-color:var(--accent)}.ds-ext:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}"
+    },
+    {
+      "name": "Back Link",
+      "kind": "button",
+      "refersTo": "back-link",
+      "description": "Quiet return link; arrow slides backward on hover (mirrored in RTL).",
+      "html": "<a class=\"ds-back\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M19 12H5m6-6-6 6 6 6\"/></svg>All projects</a>",
+      "css": ":host{--bg:#fafafa;--surface:#fff;--fg:#0a0a0a;--muted:#4b4b4b;--faint:#6b6b6b;--line:#e4e4e4;--accent:#0f766e;--accent-bg:rgb(15 118 110 / .08);--sans:'Geist Variable','Noto Sans Arabic Variable',ui-sans-serif,system-ui,sans-serif;--mono:'Geist Mono Variable','Noto Sans Arabic Variable',ui-monospace,'SF Mono',Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-back{display:inline-flex;align-items:center;gap:.5rem;padding-block:.25rem;color:var(--faint);font:500 .875rem var(--sans);text-decoration:none;transition:color .2s}.ds-back:hover{color:var(--fg)}.ds-back svg{transition:translate .3s var(--ease)}.ds-back:hover svg{translate:-.25rem 0}.ds-back:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}"
+    },
+    {
+      "name": "Contact Email",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Large email link with 2px hairline underline turning teal.",
+      "html": "<a class=\"ds-mail\" href=\"#\">name@example.com</a>",
+      "css": ":host{--bg:#fafafa;--surface:#fff;--fg:#0a0a0a;--muted:#4b4b4b;--faint:#6b6b6b;--line:#e4e4e4;--accent:#0f766e;--accent-bg:rgb(15 118 110 / .08);--sans:'Geist Variable','Noto Sans Arabic Variable',ui-sans-serif,system-ui,sans-serif;--mono:'Geist Mono Variable','Noto Sans Arabic Variable',ui-monospace,'SF Mono',Menlo,monospace;--ease:cubic-bezier(0.16,1,0.3,1)} .ds-mail{color:var(--fg);font:550 clamp(1.25rem,1rem + 1.5vw,1.75rem) var(--sans);letter-spacing:-.02em;text-decoration-color:var(--line);text-decoration-thickness:2px;text-underline-offset:.22em;transition:text-decoration-color .2s}.ds-mail:hover{text-decoration-color:var(--accent)}.ds-mail:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Fixed Identity, The Scrolling Record",
+    "overview": "This is a standard developer portfolio, done carefully. The system is a quiet neutral ground with near-black ink, 1px hairlines and one teal accent. On desktop the identity stays fixed in a sticky left column while the evidence scrolls past on the right. Text comes first. The only images are real notebook figures, and they appear as small plates inside the record. They never serve as hero art.\n\nDensity is calm and editorial: 1rem body at a 1.7 line-height, section gaps of 6rem to 8rem, and entries set as rows separated by space, with no boxes around them. Light and dark are exact sibling themes that follow the system setting. Neither is derived from the other at runtime. The system works in three languages: Arabic uses its own font, a looser line-height (1.9) and no letter-spacing. Every directional value is a logical property, so RTL mirrors without overrides.\n\nThe look is deliberately conventional (brittanychiang.com's two-column record, leerob.com's restraint, Geist's hairline precision). Quality comes from execution, not from novelty.",
+    "keyCharacteristics": [
+      "Sticky identity column (5fr) beside a scrolling record (6fr) at 64rem and up. The columns stack below that.",
+      "Rows, not cards: a gutter column holds dates or project images, and the content column holds everything else.",
+      "One teal accent, used only for interaction.",
+      "Flat surfaces. Depth comes from hairlines and a single surface step on hover, never from shadows.",
+      "Geist Sans for text and Geist Mono for machine-shaped data (dates, years, tech tags, code). Noto Sans Arabic is in both stacks."
+    ],
+    "rules": [
+      {
+        "name": "The One Teal Rule",
+        "body": "Teal marks interaction and nothing else: links, the active nav line, focus and hover states. Never use it for a heading, an icon at rest, a fill or decoration. The one tinted exception is Teal Wash, which is reserved for inline code.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Exact Themes Rule",
+        "body": "Every color token has a hand-set dark value. A new token gets both values or it doesn't ship.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono Is Data Rule",
+        "body": "Geist Mono is used only for dates, years, tech tags and code. Never set a heading, a label or prose in it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Arabic Has Its Own Metrics Rule",
+        "body": "Under `:lang(ar)`, remove letter-spacing, raise line-height to 1.9 and enlarge uppercase-style labels to 0.875rem. Never apply uppercase tracking to Arabic.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Not Shadow Rule",
+        "body": "Separate things with space first and a 1px hairline second. Raise a surface only as a hover response, and only by one tonal step.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use logical properties everywhere (`margin-inline`, `padding-inline-start`, `inset-inline-start`, `border-block`). Mirror directional icons and nudges under `[dir='rtl']`.",
+      "Do give every new color token an exact dark value inside the `prefers-color-scheme: dark` block.",
+      "Do put dates in the row gutter as Mono Meta. Project images go in the gutter only, and the year moves to the content column.",
+      "Do cap figures at 24rem and outline them with a 1px inset hairline.",
+      "Do keep transitions to color, opacity, background and small translates, using `cubic-bezier(0.16, 1, 0.3, 1)`. Reduced motion collapses them."
+    ],
+    "donts": [
+      "Don't wrap entries in cards, borders or shadows. Rows are separated by space, and only a hovered linked row gets a surface.",
+      "Don't use teal for anything except links, the active nav line, focus and hover states.",
+      "Don't set headings, labels or prose in Geist Mono.",
+      "Don't apply letter-spacing or uppercase tracking to Arabic text.",
+      "Don't give tag pills a fill, an accent or a hover state."
+    ]
+  }
+}

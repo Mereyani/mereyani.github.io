@@ -1,0 +1,55 @@
+---
+import '@fontsource-variable/geist';
+import '@fontsource-variable/geist-mono';
+import '@fontsource-variable/noto-sans-arabic';
+import '../styles/global.css';
+import { dicts, dir, defaultLocale, localePath, locales, ogLocales, type Locale } from '../i18n';
+import { site } from '../data/site';
+
+interface Props {
+  locale: Locale;
+  /** Path without the locale prefix, e.g. 'projects/jobpilot'. */
+  path?: string;
+  title?: string;
+  description?: string;
+  jsonld?: object;
+  noindex?: boolean;
+}
+
+const { locale, path = '', title, description, jsonld, noindex = false } = Astro.props;
+const t = dicts[locale];
+const pageTitle = title ? `${title} — ${site.name}` : t.meta.title;
+const pageDescription = description ?? t.meta.description;
+const url = (l: Locale) => new URL(localePath(l, path), site.url).href;
+---
+
+<!doctype html>
+<html lang={locale} dir={dir(locale)}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={url(locale)} />}
+    {!noindex && locales.map((l) => <link rel="alternate" hreflang={l} href={url(l)} />)}
+    {!noindex && <link rel="alternate" hreflang="x-default" href={url(defaultLocale)} />}
+    <meta property="og:type" content={path ? 'article' : 'profile'} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={url(locale)} />
+    <meta property="og:locale" content={ogLocales[locale]} />
+    {locales.filter((l) => l !== locale).map((l) => <meta property="og:locale:alternate" content={ogLocales[l]} />)}
+    <meta name="twitter:card" content="summary" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafafa" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
+  </head>
+  <body>
+    <a class="skip" href="#content">{t.ui.skip}</a>
+    <slot />
+  </body>
+</html>

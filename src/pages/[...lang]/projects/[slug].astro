@@ -1,0 +1,105 @@
+---
+import { render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../../layouts/Layout.astro';
+import Icon from '../../../components/Icon.astro';
+import LangSwitch from '../../../components/LangSwitch.astro';
+import { dicts, localeParams, localePath, type Locale } from '../../../i18n';
+import { getProjects } from '../../../lib/projects';
+import { site } from '../../../data/site';
+
+type Project = Awaited<ReturnType<typeof getProjects>>[number];
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const { params, props } of localeParams()) {
+    for (const project of await getProjects(props.locale)) {
+      paths.push({ params: { ...params, slug: project.slug }, props: { locale: props.locale, project } });
+    }
+  }
+  return paths;
+}
+
+const { locale, project } = Astro.props as { locale: Locale; project: Project };
+const t = dicts[locale];
+const { title, summary, coverAlt, role, highlights } = project.text.data;
+const { Content } = await render(project.text);
+const path = `projects/${project.slug}`;
+const links = [
+  { href: project.github, label: t.ui.code, icon: 'github' as const },
+  { href: project.kaggle, label: t.ui.notebook, icon: 'arrow' as const },
+  { href: project.live, label: t.ui.live, icon: 'arrow' as const },
+  { href: project.video, label: t.ui.video, icon: 'arrow' as const },
+].filter((l) => l.href);
+---
+
+<Layout locale={locale} path={path} title={title} description={summary}>
+  <div class="page">
+    <header class="page-top">
+      <a class="back" href={`${localePath(locale)}#projects`}><Icon name="back" />{t.ui.back}</a>
+      <LangSwitch locale={locale} path={path} />
+    </header>
+
+    <main id="content">
+      <article>
+        <h1>{title}</h1>
+        <p class="lede">{summary}</p>
+
+        <dl class="facts">
+          {
+            project.year && (
+              <>
+                <dt>{t.ui.year}</dt>
+                <dd class="mono">{project.year}</dd>
+              </>
+            )
+          }
+          <dt>{t.ui.technologies}</dt>
+          <dd><ul class="tags">{project.tags.map((x) => <li>{x}</li>)}</ul></dd>
+        </dl>
+
+        {
+          links.length > 0 && (
+            <ul class="links">
+              {links.map((l) => (
+                <li>
+                  <a href={l.href}><Icon name={l.icon} />{l.label}</a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+
+        {
+          project.cover && (
+            <Image class:list={["cover", { chart: project.cover.width / project.cover.height < 1.4 }]} src={project.cover} alt={coverAlt ?? ''} widths={[720, 1440]} sizes="(min-width: 46rem) 42rem, 100vw" />
+          )
+        }
+
+        {
+          highlights.length > 0 && (
+            <section class="extra key">
+              <h2>{t.ui.highlights}</h2>
+              <ul>{highlights.map((h) => <li>{h}</li>)}</ul>
+            </section>
+          )
+        }
+
+        <div class="prose"><Content /></div>
+
+        {
+          role.length > 0 && (
+            <section class="extra">
+              <h2>{t.ui.role}</h2>
+              <ul>{role.map((r) => <li>{r}</li>)}</ul>
+            </section>
+          )
+        }
+      </article>
+    </main>
+
+    <footer class="foot">
+      <a href={localePath(locale)}>{site.name}</a>
+    </footer>
+  </div>
+</Layout>

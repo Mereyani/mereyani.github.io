@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { dicts, dir, localePath, locales } from '../i18n';
+
+// GitHub Pages serves this one file for every missing URL, so it speaks all three languages.
+---
+
+<Layout locale="en" title={dicts.en.ui.notFoundTitle} noindex>
+  <main id="content" class="page nf">
+    <h1 class="mono">404</h1>
+    {
+      locales.map((l) => (
+        <section lang={l} dir={dir(l)}>
+          <h2>{dicts[l].ui.notFoundTitle}</h2>
+          <p>{dicts[l].ui.notFoundBody}</p>
+          <a href={localePath(l)}>{dicts[l].ui.back}</a>
+        </section>
+      ))
+    }
+  </main>
+</Layout>
