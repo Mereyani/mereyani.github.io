@@ -59,9 +59,10 @@ const pdf = `/cv/Mohamed-Mereyani-CV-${locale.toUpperCase()}.pdf`;
             t.experience.map((job) => (
               <div class="cv-item">
                 <div class="cv-head">
-                  <h3>{job.role} <span class="cv-meta">· {job.org} · {job.where}</span></h3>
+                  <h3>{job.role}</h3>
                   <p class="cv-when">{job.period}</p>
                 </div>
+                <p class="cv-meta">{job.org} · {job.where}</p>
                 <ul class="cv-points">{job.points.map((p) => <li>{p}</li>)}</ul>
               </div>
             ))
@@ -74,11 +75,8 @@ const pdf = `/cv/Mohamed-Mereyani-CV-${locale.toUpperCase()}.pdf`;
             projects.map((p) => (
               <div class="cv-item">
                 <div class="cv-head">
-                  <h3>
-                    <a href={new URL(localePath(locale, `projects/${p.slug}`), site.url).href}>{p.text.data.title}</a>{' '}
-                    <span class="cv-tags" dir="ltr">{p.tags.join(', ')}</span>
-                  </h3>
-                  {p.year && <p class="cv-when">{p.year}</p>}
+                  <h3><a href={new URL(localePath(locale, `projects/${p.slug}`), site.url).href}>{p.text.data.title}</a></h3>
+                  <p class="cv-tags" dir="ltr">{p.tags.join(', ')}</p>
                 </div>
                 <p>{p.text.data.cv ?? p.text.data.summary}</p>
               </div>
@@ -117,25 +115,22 @@ const pdf = `/cv/Mohamed-Mereyani-CV-${locale.toUpperCase()}.pdf`;
           </dl>
         </section>
 
-        <section>
-          <h2>{t.cv.references}</h2>
-          {
-            priv ? (
+        {
+          priv && (
+            <section>
+              <h2>{t.cv.references}</h2>
               <div class="cv-refs">
                 {priv.references[locale].map((r) => (
                   <p>
-                    <strong>{r.name}</strong> · {r.role}
-                    <br />
+                    <strong>{r.name}</strong> · {r.role} ·{' '}
                     {r.phone && <><bdi dir="ltr">{r.phone}</bdi> · </>}
                     <a href={`mailto:${r.email}`}><bdi dir="ltr">{r.email}</bdi></a>
                   </p>
                 ))}
               </div>
-            ) : (
-              <p>{t.cv.referencesNote}</p>
-            )
-          }
-        </section>
+            </section>
+          )
+        }
       </article>
     </main>
   </div>

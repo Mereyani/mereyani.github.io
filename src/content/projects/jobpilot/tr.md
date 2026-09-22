@@ -1,7 +1,7 @@
 ---
 title: JobPilot
 summary: Uygun iş ilanlarını bulan, gerçek bir iletişim e-postasına kişiselleştirilmiş başvuru gönderen ve gelen yanıtları yöneten, yerel bir panelden çalışan çok ajanlı bir sistem.
-cv: "Çok ajanlı iş arama hattı: özgeçmiş ayrıştırma, LLM ile üretilen arama kelimeleri, 0–100 eşleştirme, kişiselleştirilmiş başvuru ve yanıt yönetimi."
+cv: "Çok ajanlı iş arama hattı: özgeçmiş ayrıştırma, LLM ile üretilen anahtar kelimeler, 0–100 eşleştirme, kişiselleştirilmiş başvuru ve yanıt yönetimi."
 ---
 
 JobPilot bir özgeçmişi iş arama sürecine dönüştürür. Her biri ayrı bir modül olan beş ajanı tek bir orkestratör yönetir:

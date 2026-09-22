@@ -1,7 +1,12 @@
 ---
 import '@fontsource-variable/geist';
 import '@fontsource-variable/geist-mono';
-import '@fontsource-variable/noto-sans-arabic';
+// IBM Plex Sans Arabic: the only Arabic face we tested whose text survives Chrome's PDF export intact
+// (Noto Sans/Naskh Arabic split letters and dots, so ATS parsers read garbage).
+import '@fontsource/ibm-plex-sans-arabic/400.css';
+import '@fontsource/ibm-plex-sans-arabic/500.css';
+import '@fontsource/ibm-plex-sans-arabic/600.css';
+import '@fontsource/ibm-plex-sans-arabic/700.css';
 import '../styles/global.css';
 import { dicts, dir, defaultLocale, localePath, locales, ogLocales, type Locale } from '../i18n';
 import { site } from '../data/site';

@@ -30,10 +30,8 @@ export default {
       org: 'Sinerji Bilişim (Bizmed)',
       where: 'Uzaktan',
       points: [
-        'Hastane müşterilerinin talepleri doğrultusunda, yaklaşık 90 hastanede kullanılan Bizmed HBYS için Delphi ile özel modüller, özellikler ve arayüz butonları geliştirdim.',
-        'Yeni özelliklerin dayandığı Oracle veritabanını genişlettim: tablolar, alanlar ve PL/SQL fonksiyonları ekledim; mevcut fonksiyon ve prosedürleri düzenledim.',
-        'Sistemdeki yazılım hatalarını tespit edip giderdim.',
-        'Tamamen uzaktan, görev tabanlı bir ekipte çalıştım.',
+        'Bizmed HBYS\'nin birçok bölümünde hastane müşterilerinin taleplerini karşıladım: hataları giderdim, Delphi ile yeni özellikler, modüller ve arayüz bileşenleri ekledim.',
+        'Bu özelliklerin dayandığı Oracle veritabanını genişlettim: tablolar, alanlar ve PL/SQL fonksiyonları ekledim; mevcut fonksiyon ve prosedürleri düzenledim.',
       ],
       tags: ['Delphi', 'Oracle', 'PL/SQL', 'SQL', 'HBYS'],
     },
@@ -53,14 +51,13 @@ export default {
     },
   ],
   skills: [
-    { group: 'Programlama dilleri', items: ['Python', 'C#', 'Delphi', 'JavaScript'] },
-    { group: 'Veritabanları', items: ['Oracle', 'PL/SQL', 'PostgreSQL', 'Veritabanı tasarımı'] },
+    { group: 'Programlama', items: ['Python', 'SQL', 'C#', 'Delphi', 'JavaScript'] },
     {
-      group: 'Yapay zekâ ve veri bilimi',
-      items: ['Derin öğrenme (CNN)', 'Makine öğrenmesi', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
+      group: 'Yapay zekâ ve makine öğrenmesi',
+      items: ['Derin öğrenme (CNN)', 'Transfer öğrenme (VGG16)', 'Bilgisayarlı görü', 'LLM ajanları', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
     },
-    { group: 'Donanım', items: ['Arduino', 'Seri haberleşme', 'LCD entegrasyonu'] },
-    { group: 'Sistemler ve araçlar', items: ['HBYS', 'Uzaktan görev yönetimi'] },
+    { group: 'Veritabanı ve backend', items: ['Oracle PL/SQL', 'PostgreSQL', 'SQLite', 'Veritabanı tasarımı', 'FastAPI'] },
+    { group: 'Sistemler ve araçlar', items: ['Hastane bilgi yönetim sistemleri (HBYS)', 'Arduino', 'Playwright', 'Claude Code'] },
   ],
   languages: [
     { name: 'Arapça', level: 'Ana dil' },
@@ -70,12 +67,11 @@ export default {
   cv: {
     label: 'Özgeçmiş',
     summary:
-      'Yaklaşık 90 hastanede kullanılan Bizmed HBYS (Delphi, Oracle PL/SQL) üzerinde yaklaşık iki yıllık üretim deneyimine ve tıbbi görüntüler üzerinde uygulamalı derin öğrenme çalışmalarına sahip bilgisayar mühendisi; röntgen görüntülerinde test verisinde %98,2 doğrulukla çalışan bir kırık sınıflandırıcısı geliştirdi. Siirt Üniversitesi Mühendislik Fakültesi birincisi olarak mezun oldu; şu anda tezli Bilgisayar Mühendisliği yüksek lisansına devam ediyor.',
+      'Yaklaşık 90 hastanede kullanılan Bizmed HBYS (Delphi, Oracle PL/SQL) üzerinde yaklaşık iki yıllık üretim deneyimine ve tıbbi görüntüler üzerinde uygulamalı derin öğrenme çalışmalarına sahip bir bilgisayar mühendisiyim; röntgen görüntülerinde test verisinde %98,2 doğruluğa ulaşan bir kırık sınıflandırıcısı geliştirdim. Siirt Üniversitesi Mühendislik Fakültesi birincisi olarak mezun oldum; şu anda tezli Bilgisayar Mühendisliği yüksek lisansına devam ediyorum.',
     download: 'PDF indir',
     profile: 'Profil',
     location: 'Türkiye',
     references: 'Referanslar',
-    referencesNote: 'Talep üzerine sunulur.',
   },
   ui: {
     skip: 'İçeriğe geç',

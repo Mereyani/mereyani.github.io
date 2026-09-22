@@ -8,8 +8,8 @@
   --line: #e4e4e4;
   --accent: #0f766e;
   --accent-bg: rgb(15 118 110 / 0.08);
-  --sans: 'Geist Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif;
-  --mono: 'Geist Mono Variable', 'Noto Sans Arabic Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+  --sans: 'Geist Variable', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif;
+  --mono: 'Geist Mono Variable', 'IBM Plex Sans Arabic', ui-monospace, 'SF Mono', Menlo, monospace;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --gutter: 1.5rem;
   color-scheme: light dark;
@@ -1044,8 +1044,7 @@ article h1 {
 
 .cv-refs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  gap: 0.5rem 1.5rem;
+  gap: 0.125rem;
 }
 
 .cv strong {
@@ -1112,12 +1111,39 @@ body:lang(ar) .cv {
     max-width: none;
     padding: 0;
     box-shadow: none;
-    font-size: 8.75pt;
-    line-height: 1.42;
+    font-size: 9.5pt;
+    line-height: 1.35;
+  }
+
+  /* Letter-spaced caps extract as "E X P E R I E N C E" in ATS parsers. */
+  .cv h2 {
+    font-size: 9pt;
+    letter-spacing: 0.02em;
+  }
+
+  .cv h1 {
+    font-size: 22pt;
+  }
+
+  .cv h3 {
+    font-size: 9.75pt;
+  }
+
+  .cv-when,
+  .cv-tags,
+  .cv-contact,
+  .cv-refs {
+    font-size: 8.5pt;
+  }
+
+  .cv h3 a {
+    text-decoration: underline;
+    text-decoration-color: var(--line);
+    text-underline-offset: 0.2em;
   }
 
   body:lang(ar) .cv {
-    line-height: 1.48;
+    line-height: 1.42;
   }
 
   .cv-item {
@@ -1125,7 +1151,7 @@ body:lang(ar) .cv {
   }
 
   .cv section {
-    margin-top: 0.7rem;
+    margin-top: 0.6rem;
   }
 
   .cv h2 {

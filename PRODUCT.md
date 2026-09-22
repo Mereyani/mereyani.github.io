@@ -56,7 +56,7 @@ All facts come from the owner's CV (`~/Downloads/Mohamed Mereyani_CV_EN (1).pdf`
 
 - Kaggle (`kaggle.com/mereyani`): public notebooks for Bone Fracture (VGG16, 98.2% test accuracy on 506 X-rays), Cataract (VGG16 + 2 conv, 86.6% on 82 images, immature vs mature) and Heart Disease (Naive Bayes 84.0%, KNN 79.8% on 238 records). Figures on the site come from these notebooks; dataset licences: fracture data PDDL, cataract data CC BY-SA 4.0 (credited on the page).
 
-Missing, and not to be fabricated: code link and photos for Hand Signal Classification, LinkedIn URL, thesis topic, the Arabic spelling of the owner's name, screenshots of JobPilot and install-from-video.
+Missing, and not to be fabricated: code link and photos for Hand Signal Classification, thesis topic, screenshots of JobPilot and install-from-video.
 
 ## Product Principles
 

@@ -17,7 +17,6 @@ export interface Dict {
     profile: string;
     location: string;
     references: string;
-    referencesNote: string;
   };
   ui: {
     skip: string;

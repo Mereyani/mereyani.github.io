@@ -1,5 +1,5 @@
 ---
-title: Katarakt Sınıflandırma
+title: Katarakt Sınıflandırması
 summary: Göz görüntülerinde olgunlaşmamış ve olgun kataraktı ayırt eden, VGG16 tabanı ve özel CNN katmanları kullanan bir tarama modeli. Ayrılmış görüntülerde %86,6 doğruluk.
 coverAlt: Veri setinden yakın çekim göz fotoğrafları; her biri olgunlaşmamış veya olgun katarakt olarak etiketli.
 highlights:

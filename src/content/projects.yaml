@@ -1,25 +1,25 @@
 # One entry per project. The key is the URL slug and the folder name under projects/.
 # Text for each language lives in projects/<slug>/<en|ar|tr>.md.
 jobpilot:
-  order: 1
+  order: 2
   year: 2026
   tags: [Python, FastAPI, Playwright, SQLite, LLM agents]
   github: https://github.com/Mereyani/JobPilot
 
 install-from-video:
-  order: 2
+  order: 6
   year: 2026
   tags: [Python, faster-whisper, yt-dlp, Claude Code]
   github: https://github.com/Mereyani/install-from-video
 
 bone-fracture-classification:
-  order: 3
+  order: 1
   tags: [Python, TensorFlow, Keras, VGG16, CNN]
   kaggle: https://www.kaggle.com/code/mereyani/bone-fracture-classification-1
   cover: ./projects/bone-fracture-classification/cover.png
 
 cataract-classification:
-  order: 4
+  order: 3
   tags: [Python, TensorFlow, Keras, VGG16, CNN]
   kaggle: https://www.kaggle.com/code/mereyani/cataract-classification-86
   cover: ./projects/cataract-classification/cover.png
@@ -30,7 +30,7 @@ hand-signal-classification:
   # TODO(owner): code link and a photo of the LCD setup not provided yet
 
 heart-disease-detection:
-  order: 6
+  order: 4
   tags: [Python, Pandas, scikit-learn, KNN, Naive Bayes]
   kaggle: https://www.kaggle.com/code/mereyani/heart-disease-detection
   cover: ./projects/heart-disease-detection/cover.png

@@ -30,10 +30,8 @@ export default {
       org: 'Sinerji Bilişim (Bizmed)',
       where: 'Remote',
       points: [
-        'Developed custom modules, features and interface controls in Delphi for Bizmed HBYS, a hospital information system used in nearly 90 hospitals, based on hospital client requests.',
-        'Extended the Oracle database behind new features: added tables, columns and PL/SQL functions, and modified existing functions and procedures.',
-        'Found and fixed software bugs across the system.',
-        'Worked in a fully remote, task-based team.',
+        'Delivered hospital client requests across several departments of Bizmed HBYS: fixed bugs and added features, modules and interface controls in Delphi.',
+        'Extended the Oracle database behind these features: added tables, columns and PL/SQL functions, and modified existing functions and procedures.',
       ],
       tags: ['Delphi', 'Oracle', 'PL/SQL', 'SQL', 'HBYS'],
     },
@@ -53,14 +51,13 @@ export default {
     },
   ],
   skills: [
-    { group: 'Programming', items: ['Python', 'C#', 'Delphi', 'JavaScript'] },
-    { group: 'Databases', items: ['Oracle', 'PL/SQL', 'PostgreSQL', 'Database design'] },
+    { group: 'Programming', items: ['Python', 'SQL', 'C#', 'Delphi', 'JavaScript'] },
     {
-      group: 'AI & data science',
-      items: ['Deep learning (CNN)', 'Machine learning', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
+      group: 'AI & machine learning',
+      items: ['Deep learning (CNN)', 'Transfer learning (VGG16)', 'Computer vision', 'LLM agents', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
     },
-    { group: 'Hardware', items: ['Arduino', 'Serial communication', 'LCD integration'] },
-    { group: 'Systems & tools', items: ['HBYS', 'Remote task management'] },
+    { group: 'Databases & backend', items: ['Oracle PL/SQL', 'PostgreSQL', 'SQLite', 'Database design', 'FastAPI'] },
+    { group: 'Systems & tools', items: ['Hospital information systems (HBYS)', 'Arduino', 'Playwright', 'Claude Code'] },
   ],
   languages: [
     { name: 'Arabic', level: 'Native' },
@@ -75,7 +72,6 @@ export default {
     profile: 'Profile',
     location: 'Turkey',
     references: 'References',
-    referencesNote: 'Available on request.',
   },
   ui: {
     skip: 'Skip to content',

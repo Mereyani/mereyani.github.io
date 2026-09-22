@@ -1,5 +1,5 @@
 ---
-title: Kemik Kırığı Sınıflandırma
+title: Kemik Kırığı Sınıflandırması
 summary: Bitirme projem; röntgen görüntülerini "kırık" veya "kırık değil" olarak sınıflandıran ve ayrılmış test görüntülerinde %98,2 doğruluğa ulaşan bir derin öğrenme modeli.
 coverAlt: Eğitim verisinden bilek, el ve önkol röntgenleri; her biri kırık veya kırık değil olarak etiketli.
 highlights:

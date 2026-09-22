@@ -20,48 +20,48 @@ colors:
   hairline-dark: "#262626"
 typography:
   display:
-    fontFamily: "'Geist Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(2.25rem, 1.6rem + 2.6vw, 3rem)"
     fontWeight: 650
     lineHeight: 1.08
     letterSpacing: "-0.035em"
   headline:
-    fontFamily: "'Geist Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(2rem, 1.5rem + 2.5vw, 2.75rem)"
     fontWeight: 650
     lineHeight: 1.1
     letterSpacing: "-0.035em"
   title-lg:
-    fontFamily: "'Geist Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.125rem"
     fontWeight: 500
     letterSpacing: "-0.01em"
   title:
-    fontFamily: "'Geist Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "1rem"
     fontWeight: 550
     lineHeight: 1.45
   body:
-    fontFamily: "'Geist Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.7
   small:
-    fontFamily: "'Geist Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.875rem"
     fontWeight: 400
   label:
-    fontFamily: "'Geist Variable', 'Noto Sans Arabic Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 600
     letterSpacing: "0.12em"
   mono-meta:
-    fontFamily: "'Geist Mono Variable', 'Noto Sans Arabic Variable', ui-monospace, 'SF Mono', Menlo, monospace"
+    fontFamily: "'Geist Mono Variable', 'IBM Plex Sans Arabic', ui-monospace, 'SF Mono', Menlo, monospace"
     fontSize: "0.8125rem"
     lineHeight: 1.5
     fontFeature: "tnum"
   mono-tag:
-    fontFamily: "'Geist Mono Variable', 'Noto Sans Arabic Variable', ui-monospace, 'SF Mono', Menlo, monospace"
+    fontFamily: "'Geist Mono Variable', 'IBM Plex Sans Arabic', ui-monospace, 'SF Mono', Menlo, monospace"
     fontSize: "0.75rem"
     fontWeight: 500
     lineHeight: 1.4
@@ -127,7 +127,7 @@ The look is deliberately conventional (brittanychiang.com's two-column record, l
 - Rows, not cards: a gutter column holds dates or project images, and the content column holds everything else.
 - One teal accent, used only for interaction.
 - Flat surfaces. Depth comes from hairlines and a single surface step on hover, never from shadows.
-- Geist Sans for text and Geist Mono for machine-shaped data (dates, years, tech tags, code). Noto Sans Arabic is in both stacks.
+- Geist Sans for text and Geist Mono for machine-shaped data (dates, years, tech tags, code). IBM Plex Sans Arabic is in both stacks.
 
 ## Colors
 
@@ -152,9 +152,9 @@ A monochrome ground of paper, ink and two greys, plus one teal. Light and dark a
 
 ## Typography
 
-**Display Font:** Geist Variable (with Noto Sans Arabic Variable, then system sans)
+**Display Font:** Geist Variable (with IBM Plex Sans Arabic, then system sans)
 **Body Font:** Geist Variable (same stack)
-**Label/Mono Font:** Geist Mono Variable (with Noto Sans Arabic Variable, then ui-monospace)
+**Label/Mono Font:** Geist Mono Variable (with IBM Plex Sans Arabic, then ui-monospace)
 
 **Character:** A neutral grotesk set tight at display sizes and relaxed in body copy, paired with a mono that marks data rather than decorating it.
 
@@ -238,3 +238,7 @@ Project images and notebook plates carry a 1px inset hairline outline. Prose fig
 - **Don't** set headings, labels or prose in Geist Mono.
 - **Don't** apply letter-spacing or uppercase tracking to Arabic text.
 - **Don't** give tag pills a fill, an accent or a hover state.
+
+## Arabic face and PDFs
+
+Arabic is set in IBM Plex Sans Arabic (static weights 400–700). It was chosen for a functional reason: of the faces tested (Noto Sans Arabic, Noto Naskh Arabic, Geeza Pro, SF Arabic, IBM Plex Sans Arabic), it is the only one whose text survives Chrome's PDF export intact, so the Arabic CV stays readable by ATS parsers. Do not swap it without re-running `npm run cv` and checking the text layer with `osascript -l JavaScript scripts/pdf-text.js public/cv/Mohamed-Mereyani-CV-AR.pdf`.
