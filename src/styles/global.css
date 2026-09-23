@@ -554,7 +554,15 @@ dl {
 }
 
 .foot a {
+  display: inline-block;
+  padding-block: 0.25rem;
   text-decoration: none;
+}
+
+/* The only Arabic on EN/TR pages is «العربية» in the language switch; the system face
+   renders it without downloading ~170KB of IBM Plex Sans Arabic. */
+html:not([lang='ar']) [lang='ar'] {
+  font-family: system-ui, sans-serif;
 }
 
 .foot a:hover {
@@ -877,7 +885,9 @@ article h1 {
 
 /* CV: one A4 page. Screen shows the sheet; print and PDF use @page. */
 .cv-link {
-  padding-block: 0.25rem;
+  display: inline-block;
+  padding: 0.25rem;
+  margin-inline: -0.25rem;
   color: var(--fg);
   font-size: 0.8125rem;
   font-weight: 600;
