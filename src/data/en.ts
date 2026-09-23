@@ -64,6 +64,7 @@ export default {
     { name: 'Turkish', level: 'Fluent' },
     { name: 'English', level: 'Intermediate (B1–B2)' },
   ],
+  domains: { medical: 'Medical imaging', clinical: 'Clinical data', agents: 'LLM agents', hardware: 'Hardware & vision' },
   cv: {
     label: 'CV',
     summary:
@@ -84,6 +85,7 @@ export default {
     linkedin: 'LinkedIn',
     code: 'Source code',
     notebook: 'Kaggle notebook',
+    areas: 'Project areas',
     live: 'Live demo',
     video: 'Video',
     back: 'Back to home',

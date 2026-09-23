@@ -64,6 +64,7 @@ export default {
     { name: 'التركية', level: 'ممتازة' },
     { name: 'الإنجليزية', level: 'متوسطة (B1–B2)' },
   ],
+  domains: { medical: 'التصوير الطبي', clinical: 'البيانات السريرية', agents: 'وكلاء النماذج اللغوية', hardware: 'العتاد والرؤية' },
   cv: {
     label: 'السيرة الذاتية',
     summary:
@@ -84,6 +85,7 @@ export default {
     linkedin: 'LinkedIn',
     code: 'الشيفرة المصدرية',
     notebook: 'دفتر Kaggle',
+    areas: 'مجالات المشاريع',
     live: 'عرض مباشر',
     video: 'فيديو',
     back: 'العودة إلى الرئيسية',

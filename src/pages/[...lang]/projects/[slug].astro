@@ -40,7 +40,8 @@ const links = [
     </header>
 
     <main id="content">
-      <article>
+      <article data-domain={project.domain}>
+        <p class="domain">{t.domains[project.domain]}</p>
         <h1>{title}</h1>
         <p class="lede">{summary}</p>
 
@@ -71,7 +72,15 @@ const links = [
 
         {
           project.cover && (
-            <Image class:list={["cover", { chart: project.cover.width / project.cover.height < 1.4 }]} src={project.cover} alt={coverAlt ?? ''} widths={[720, 1440]} sizes="(min-width: 46rem) 42rem, 100vw" />
+            <Image
+              class:list={['cover', { chart: project.cover.width / project.cover.height < 1.4 }]}
+              style={`view-transition-name: cover-${project.slug}`}
+              src={project.cover}
+              alt={coverAlt ?? ''}
+              widths={[720, 1440]}
+              sizes="(min-width: 46rem) 42rem, 100vw"
+              loading="eager"
+            />
           )
         }
 

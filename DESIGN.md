@@ -242,3 +242,23 @@ Project images and notebook plates carry a 1px inset hairline outline. Prose fig
 ## Arabic face and PDFs
 
 Arabic is set in IBM Plex Sans Arabic (static weights 400–700). It was chosen for a functional reason: of the faces tested (Noto Sans Arabic, Noto Naskh Arabic, Geeza Pro, SF Arabic, IBM Plex Sans Arabic), it is the only one whose text survives Chrome's PDF export intact, so the Arabic CV stays readable by ATS parsers. Do not swap it without re-running `npm run cv` and checking the text layer with `osascript -l JavaScript scripts/pdf-text.js public/cv/Mohamed-Mereyani-CV-AR.pdf`.
+
+## Domain colours and motion (2026-09-23)
+
+Each project has a `domain` in `src/content/projects.yaml` that sets `--d` / `--d-bg` via `[data-domain]`:
+
+| Domain | Light | Dark |
+|---|---|---|
+| medical (medical imaging) | #0f766e | #2dd4bf |
+| clinical (clinical data) | #be123c | #fb7185 |
+| agents (LLM agents) | #6d28d9 | #a78bfa |
+| hardware (hardware & vision) | #92400e | #fbbf24 |
+
+Used for the domain label (dot + text), tech tags, row title hover, thumbnail ring, key-result rules and the sidebar legend. Tag text on its tint is ≥4.6:1 in light mode. The page ground stays neutral; teal `--accent` still marks links, the active nav line and focus.
+
+Motion, all disabled or reduced under `prefers-reduced-motion`:
+- Cross-document view transitions: a project's thumbnail (`view-transition-name: cover-<slug>`) grows into its cover.
+- X-ray scan: a band of the domain colour sweeps a thumbnail once per hover/focus.
+- Project rows rise in once with a scroll-driven `view()` timeline (filter, not opacity, so hover dimming still works). Keep `animation-timeline` in its own rule: the minifier folds it into the shorthand otherwise.
+- Hovering or focusing a legend chip dims the other domains' rows (pure CSS `:has`).
+

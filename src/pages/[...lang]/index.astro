@@ -13,6 +13,7 @@ const { locale } = Astro.props as { locale: Locale };
 const t = dicts[locale];
 const projects = await getProjects(locale);
 const sections = ['about', 'experience', 'projects', 'education', 'skills'] as const;
+const domains = ['medical', 'clinical', 'agents', 'hardware'] as const;
 
 const jsonld = {
   '@context': 'https://schema.org',
@@ -34,6 +35,16 @@ const jsonld = {
       <h1><a href={localePath(locale)}>{t.name}</a></h1>
       <p class="role">{t.title}</p>
       <p class="tagline">{t.tagline}</p>
+
+      <ul class="legend" aria-label={t.ui.areas}>
+        {
+          domains.map((d) => (
+            <li>
+              <a href={`#${projects.find((p) => p.domain === d)?.slug}`} data-domain={d}>{t.domains[d]}</a>
+            </li>
+          ))
+        }
+      </ul>
 
       <nav class="toc" aria-label={t.ui.sections}>
         <ol>{sections.map((s) => <li><a href={`#${s}`}>{t.nav[s]}</a></li>)}</ol>
@@ -81,8 +92,12 @@ const jsonld = {
         <ol class="rows linked">
           {
             projects.map((p) => (
-              <li class="row">
-                {p.cover && <Image class="thumb" src={p.cover} alt="" widths={[288, 576]} sizes="9rem" />}
+              <li class="row" id={p.slug} data-domain={p.domain}>
+                {p.cover && (
+                  <span class="thumb" style={`view-transition-name: cover-${p.slug}`}>
+                    <Image src={p.cover} alt="" widths={[288, 576]} sizes="9rem" />
+                  </span>
+                )}
                 <div>
                   <h3>
                     <a class="stretch" href={localePath(locale, `projects/${p.slug}`)}>
@@ -90,7 +105,10 @@ const jsonld = {
                       <Icon name="arrow" />
                     </a>
                   </h3>
-                  {p.year && <p class="where mono">{p.year}</p>}
+                  <p class="domain">
+                    {t.domains[p.domain]}
+                    {p.year && <span class="mono"> · {p.year}</span>}
+                  </p>
                   <p class="summary">{p.text.data.summary}</p>
                   {(p.github || p.kaggle) && (
                     <p class="ext">

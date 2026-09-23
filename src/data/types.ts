@@ -10,6 +10,7 @@ export interface Dict {
   education: { period: string; degree: string; org: string; notes: string[] }[];
   skills: { group: string; items: string[] }[];
   languages: { name: string; level: string }[];
+  domains: { medical: string; clinical: string; agents: string; hardware: string };
   cv: {
     label: string;
     summary: string;
@@ -29,6 +30,7 @@ export interface Dict {
     linkedin: string;
     code: string;
     notebook: string;
+    areas: string;
     live: string;
     video: string;
     back: string;

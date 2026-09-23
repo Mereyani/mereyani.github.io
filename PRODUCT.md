@@ -44,6 +44,7 @@ Headline title chosen by the owner: **Computer Engineer**. What sets the profile
 ## Brand Commitments
 
 - The owner chose the category-standard developer portfolio on 2026-09-22, over bolder concepts. The craft bar is a blend of brittanychiang.com (sticky identity column with a scrolling experience/projects column), leerob.com (typographic restraint, text first) and vercel.com/Geist (precise hairline grid, exact light/dark). The design stays conventional and focuses on execution; no novelty concepts.
+- 2026-09-23: the owner asked for a livelier site, "clearest and easiest on the eyes". Colour is added by meaning, not decoration: each project domain (medical imaging, clinical data, LLM agents, hardware & vision) has one colour, always with its text label, on the same calm neutral ground. Motion must carry meaning (page continuity, X-ray scan on thumbnails, one-time list entrance) and respect reduced motion.
 
 ## Evidence on Hand
 

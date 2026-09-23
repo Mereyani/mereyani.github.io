@@ -29,6 +29,49 @@
   }
 }
 
+/* Project domains: each area of work keeps one colour, always paired with its text label. */
+[data-domain='medical'] {
+  --d: #0f766e;
+  --d-bg: rgb(15 118 110 / 0.09);
+}
+
+[data-domain='clinical'] {
+  --d: #be123c;
+  --d-bg: rgb(190 18 60 / 0.08);
+}
+
+[data-domain='agents'] {
+  --d: #6d28d9;
+  --d-bg: rgb(109 40 217 / 0.08);
+}
+
+[data-domain='hardware'] {
+  --d: #92400e;
+  --d-bg: rgb(180 83 9 / 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-domain='medical'] {
+    --d: #2dd4bf;
+    --d-bg: rgb(45 212 191 / 0.12);
+  }
+
+  [data-domain='clinical'] {
+    --d: #fb7185;
+    --d-bg: rgb(251 113 133 / 0.12);
+  }
+
+  [data-domain='agents'] {
+    --d: #a78bfa;
+    --d-bg: rgb(167 139 250 / 0.14);
+  }
+
+  [data-domain='hardware'] {
+    --d: #fbbf24;
+    --d-bg: rgb(251 191 36 / 0.12);
+  }
+}
+
 /* Base */
 *,
 *::before,
@@ -375,6 +418,62 @@ dl {
   gap: 1rem;
 }
 
+.domain {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--d);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.domain::before,
+.legend a::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  flex: none;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.domain .mono {
+  color: var(--faint);
+  font-weight: 400;
+}
+
+[data-domain] .tags li {
+  box-shadow: none;
+  background: var(--d-bg);
+  color: var(--d);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.legend a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 99rem;
+  background: var(--d-bg);
+  color: var(--d);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.legend a:hover {
+  background: color-mix(in srgb, var(--d) 18%, transparent);
+}
+
 .rows.linked .row {
   margin-inline: -1.25rem;
   padding: 1.25rem;
@@ -416,7 +515,7 @@ dl {
 
 .row:hover .stretch,
 .row:has(.stretch:focus-visible) .stretch {
-  color: var(--accent);
+  color: var(--d, var(--accent));
 }
 
 .row:hover .arrow {
@@ -458,21 +557,51 @@ dl {
 
 .thumb {
   order: 2;
+  position: relative;
   display: block;
+  overflow: hidden;
   width: 100%;
   max-width: 12rem;
-  height: auto;
   aspect-ratio: 926 / 636;
   margin-top: 0.75rem;
-  object-fit: cover;
   border-radius: 0.375rem;
   outline: 1px solid var(--line);
   outline-offset: -1px;
   transition: outline-color 0.3s var(--ease);
 }
 
+.thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* X-ray scan: a band of the project's colour sweeps the thumbnail once per hover. */
+.thumb::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 45%;
+  background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--d, var(--accent)) 45%, transparent) 55%, transparent);
+  translate: 0 -110%;
+  pointer-events: none;
+}
+
+.row:hover .thumb::after,
+.row:focus-within .thumb::after {
+  animation: scan 1.2s var(--ease) both;
+}
+
+@keyframes scan {
+  to {
+    translate: 0 240%;
+  }
+}
+
 .row:hover .thumb {
-  outline-color: var(--accent);
+  outline-color: var(--d, var(--accent));
 }
 
 .prose img {
@@ -646,6 +775,22 @@ html:not([lang='ar']) [lang='ar'] {
 @media (hover: hover) and (min-width: 64rem) {
   .rows.linked:hover .row {
     opacity: 0.5;
+  }
+
+  .shell:has(.legend [data-domain='medical']:is(:hover, :focus-visible)) .rows.linked .row:not([data-domain='medical']) {
+    opacity: 0.3;
+  }
+
+  .shell:has(.legend [data-domain='clinical']:is(:hover, :focus-visible)) .rows.linked .row:not([data-domain='clinical']) {
+    opacity: 0.3;
+  }
+
+  .shell:has(.legend [data-domain='agents']:is(:hover, :focus-visible)) .rows.linked .row:not([data-domain='agents']) {
+    opacity: 0.3;
+  }
+
+  .shell:has(.legend [data-domain='hardware']:is(:hover, :focus-visible)) .rows.linked .row:not([data-domain='hardware']) {
+    opacity: 0.3;
   }
 
   .rows.linked .row:hover,
@@ -859,9 +1004,59 @@ article h1 {
   }
 }
 
+/* Page transitions: a project's thumbnail grows into its cover (cross-document view transitions;
+   browsers without support simply navigate). */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(*) {
+  animation-duration: 0.45s;
+  animation-timing-function: var(--ease);
+}
+
+/* Project rows rise into place as they scroll in, once. filter (not opacity) so hover dimming still works. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .rows.linked .row {
+      animation-name: rise;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-range: entry 0% entry 70%;
+    }
+
+    /* Separate rule: the minifier would otherwise fold view() into the animation shorthand, which browsers reject. */
+    .rows.linked > .row {
+      animation-timeline: view();
+    }
+  }
+}
+
+@media print {
+  .rows.linked .row {
+    animation: none;
+  }
+}
+
+@keyframes rise {
+  from {
+    filter: opacity(0);
+    translate: 0 1.5rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+
   html {
     scroll-behavior: auto;
+  }
+
+  .row:hover .thumb::after,
+  .row:focus-within .thumb::after {
+    animation: none;
   }
 
   *,
@@ -879,7 +1074,7 @@ article h1 {
 
 .key li {
   padding-inline-start: 1rem;
-  border-inline-start: 1px solid var(--line);
+  border-inline-start: 2px solid var(--d, var(--line));
   color: var(--fg);
 }
 

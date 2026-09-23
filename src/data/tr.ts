@@ -64,6 +64,7 @@ export default {
     { name: 'Türkçe', level: 'İleri' },
     { name: 'İngilizce', level: 'Orta (B1–B2)' },
   ],
+  domains: { medical: 'Tıbbi görüntüleme', clinical: 'Klinik veri', agents: 'LLM ajanları', hardware: 'Donanım ve görü' },
   cv: {
     label: 'Özgeçmiş',
     summary:
@@ -84,6 +85,7 @@ export default {
     linkedin: 'LinkedIn',
     code: 'Kaynak kodu',
     notebook: 'Kaggle not defteri',
+    areas: 'Proje alanları',
     live: 'Canlı demo',
     video: 'Video',
     back: 'Ana sayfaya dön',

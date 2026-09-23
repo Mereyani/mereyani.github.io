@@ -32,6 +32,7 @@ All three languages must stay in sync. `npm run build` fails if a locale file is
    ```yaml
    my-project:
      order: 3          # position in the list, lower first
+     domain: medical   # medical | clinical | agents | hardware (sets the project's colour)
      year: 2026        # optional
      tags: [Python, PyTorch]
      github: https://github.com/Mereyani/my-project   # optional
