@@ -7,6 +7,14 @@ jobpilot:
   tags: [Python, FastAPI, Playwright, SQLite, LLM agents]
   github: https://github.com/Mereyani/JobPilot
 
+sada:
+  order: 2.5
+  domain: agents
+  year: 2026
+  tags: [Python, faster-whisper, Whisper, yt-dlp, pywebview, PyInstaller]
+  github: https://github.com/Mereyani/sada
+  cover: ./projects/sada/cover.png
+
 install-from-video:
   order: 6
   domain: agents
