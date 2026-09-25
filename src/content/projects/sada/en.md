@@ -16,4 +16,4 @@ Most transcription tools upload your audio to someone else's server. Sada keeps 
 
 ### Built to ship
 
-A small stdlib HTTP server bound to localhost feeds a native pywebview window; the UI is plain HTML, CSS and JS. The interface is available in Arabic (RTL), English and Turkish, with dark and light themes. GitHub Actions builds standalone apps for Windows, macOS (Intel and Apple Silicon) and Linux with PyInstaller on every release tag. MIT licensed.
+A small stdlib HTTP server bound to localhost feeds a native pywebview window; the UI is plain HTML, CSS and JS. The interface is available in Arabic (RTL), English and Turkish, with dark and light themes. GitHub Actions builds standalone apps for Windows, macOS (Intel and Apple Silicon) and Linux with PyInstaller on every release tag, then tests the built app on each system before publishing it. Starting from an empty model cache, the test downloads a model, transcribes a real clip, stops a download mid-way, deletes a model, and checks the RAM and thread counts against an independent reading. Stop works at every stage, and a model manager shows the real disk space of each model. MIT licensed.

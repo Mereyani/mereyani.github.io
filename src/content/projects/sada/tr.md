@@ -16,4 +16,4 @@ coverAlt: Sada'nın İngilizce arayüzü; Large v3 Turbo ile yazıya dökülmü�
 
 ### Dağıtıma hazır
 
-localhost'a bağlı küçük bir stdlib HTTP sunucusu, yerel bir pywebview penceresini besler; arayüz düz HTML, CSS ve JS'dir. Arayüz Arapça (sağdan sola), İngilizce ve Türkçe olarak, koyu ve açık temayla sunulur. GitHub Actions her sürüm etiketinde PyInstaller ile Windows, macOS (Intel ve Apple Silicon) ve Linux için bağımsız uygulamalar derler. MIT lisanslı.
+localhost'a bağlı küçük bir stdlib HTTP sunucusu, yerel bir pywebview penceresini besler; arayüz düz HTML, CSS ve JS'dir. Arayüz Arapça (sağdan sola), İngilizce ve Türkçe olarak, koyu ve açık temayla sunulur. GitHub Actions her sürüm etiketinde PyInstaller ile Windows, macOS (Intel ve Apple Silicon) ve Linux için bağımsız uygulamalar derler ve yayımlamadan önce derlenen uygulamayı her sistemde test eder. Test boş bir model önbelleğiyle başlar: bir modeli indirir, gerçek bir klibi yazıya döker, bir indirmeyi yarıda durdurur, bir modeli siler ve RAM ile iş parçacığı sayısını bağımsız bir ölçümle karşılaştırır. Durdurma her aşamada çalışır; model yöneticisi her modelin gerçek disk alanını gösterir. MIT lisanslı.
