@@ -2,7 +2,7 @@
 title: Sada · صدى
 summary: A cross-platform desktop app that transcribes speech entirely on your computer. Paste a link from YouTube, TikTok, Instagram, X or 1,000+ other sites, or drop a video or audio file, and get a timestamped transcript in 99 languages with automatic language detection.
 cv: "Offline speech-to-text desktop app (Windows/macOS/Linux): links or files → faster-whisper on-device, 99 languages with auto-detection, hardware-aware model picker, SRT/VTT export."
-coverAlt: Sada's English interface showing an Arabic clip transcribed with Large v3 Turbo and language detected automatically.
+coverAlt: Sada's English interface showing an English clip transcribed with Large v3 Turbo, language detected automatically.
 ---
 
 Most transcription tools upload your audio to someone else's server. Sada keeps it on your machine: no API, no account, and after a one-time model download it needs no internet.

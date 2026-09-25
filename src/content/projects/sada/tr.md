@@ -2,7 +2,7 @@
 title: Sada · صدى
 summary: Konuşmayı tamamen bilgisayarınızda metne döken, Windows, macOS ve Linux'ta çalışan bir masaüstü uygulaması. YouTube, TikTok, Instagram, X veya 1.000'den fazla siteden bir bağlantı yapıştırın ya da video/ses dosyası bırakın; otomatik dil algılamayla 99 dilde zaman damgalı metin alın.
 cv: "Çevrimdışı konuşmadan metne masaüstü uygulaması (Windows/macOS/Linux): bağlantı veya dosya → cihazda faster-whisper, otomatik algılamalı 99 dil, donanıma göre model seçimi, SRT/VTT dışa aktarma."
-coverAlt: Sada'nın İngilizce arayüzü; Large v3 Turbo ile yazıya dökülmüş ve dili otomatik algılanmış Arapça bir klip.
+coverAlt: Sada'nın İngilizce arayüzü; Large v3 Turbo ile yazıya dökülmüş ve dili otomatik algılanmış İngilizce bir klip.
 ---
 
 Çoğu transkripsiyon aracı sesinizi başka birinin sunucusuna yükler. Sada ise her şeyi bilgisayarınızda tutar: API yok, hesap yok. Model bir kez indirildikten sonra internete ihtiyaç duymaz.
