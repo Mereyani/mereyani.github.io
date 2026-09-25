@@ -13,6 +13,7 @@ coverAlt: Sada'nın İngilizce arayüzü; Large v3 Turbo ile yazıya dökülmü�
 - **Doğru, ama sıradan dizüstüler için de hafif.** Transkripsiyon faster-whisper (CTranslate2) ile çalışır: CPU'da int8, NVIDIA GPU'da float16. Ses etkinliği algılama sessiz bölümleri atlar; bu hem hızı artırır hem de halüsinasyonları azaltır.
 - **Cihaza uygun model.** Uygulama RAM, çekirdek sayısı ve GPU'yu okuyup bir model önerir: Tiny'den (75 MB) Large v3'e (3,1 GB) kadar. Güçlü makinelerde varsayılan Large v3 Turbo'dur: en iyiye yakın doğruluk, yaklaşık 6 kat hız.
 - **Canlı çıktı.** Bölümler çözüldükçe pencereye akar. Algılanan dil güven puanıyla gösterilir; sonuçlar TXT, SRT, VTT veya JSON olarak dışa aktarılır.
+- **Hiçbir şey kaybolmaz.** Yarıda durdurulan dahil her döküm bilgisayarda saklanır. Sonradan içinde arama yapabilir veya kelimeleri yerinde düzeltebilirsiniz; altyazı için zaman damgaları senkron kalır.
 
 ### Dağıtıma hazır
 

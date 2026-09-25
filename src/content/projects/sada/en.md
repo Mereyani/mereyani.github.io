@@ -13,6 +13,7 @@ Most transcription tools upload your audio to someone else's server. Sada keeps 
 - **Accurate, but light enough for normal laptops.** Transcription runs on faster-whisper (CTranslate2) with int8 quantization on the CPU and float16 on NVIDIA GPUs. Voice-activity detection skips silence, which makes it faster and cuts hallucinations.
 - **The right model for the device.** The app reads RAM, cores and GPU and recommends a model, from Tiny (75 MB) up to Large v3 (3.1 GB). Large v3 Turbo is the default on capable machines: near-best accuracy at about 6× the speed.
 - **Live output.** Segments stream into the window as they are decoded. The detected language is shown with a confidence score, and results export to TXT, SRT, VTT or JSON.
+- **Nothing gets lost.** Every transcript, including one stopped halfway, is saved on the computer. Later you can search it or fix words in place, and the timestamps stay in sync for subtitles.
 
 ### Built to ship
 
