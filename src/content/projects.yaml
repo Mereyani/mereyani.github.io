@@ -1,12 +1,5 @@
 # One entry per project. The key is the URL slug and the folder name under projects/.
 # Text for each language lives in projects/<slug>/<en|ar|tr>.md.
-jobpilot:
-  order: 2
-  domain: agents
-  year: 2026
-  tags: [Python, FastAPI, Playwright, SQLite, LLM agents]
-  github: https://github.com/Mereyani/JobPilot
-
 sada:
   order: 2.5
   domain: agents

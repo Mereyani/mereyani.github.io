@@ -52,12 +52,12 @@ All facts come from the owner's CV (`~/Downloads/Mohamed Mereyani_CV_EN (1).pdf`
 - B.Sc. Computer Engineering, Siirt University, 2021–2025, GPA 3.56/4.00, first-rank student in the Faculty of Engineering.
 - M.Sc. Computer Engineering (thesis program, first year), Siirt University Institute of Science and Technology, 2026–present, GPA 86.75/100.
 - Software and Database Specialist, Sinerji Bilişim (Bizmed), 07/2024 – 04/2026.
-- Projects: Hand Signal Classification, Bone Fracture Classification (graduation project), Cataract Classification, Heart Disease Detection, JobPilot, install-from-video.
+- Projects: Hand Signal Classification, Bone Fracture Classification (graduation project), Cataract Classification, Heart Disease Detection, install-from-video. (JobPilot was removed on 2026-10-07 at the owner's request: it did not work.)
 - Languages: Arabic (native), Turkish (fluent), English (intermediate).
 
 - Kaggle (`kaggle.com/mereyani`): public notebooks for Bone Fracture (VGG16, 98.2% test accuracy on 506 X-rays), Cataract (VGG16 + 2 conv, 86.6% on 82 images, immature vs mature) and Heart Disease (Naive Bayes 84.0%, KNN 79.8% on 238 records). Figures on the site come from these notebooks; dataset licences: fracture data PDDL, cataract data CC BY-SA 4.0 (credited on the page).
 
-Missing, and not to be fabricated: code link and photos for Hand Signal Classification, thesis topic, screenshots of JobPilot and install-from-video.
+Missing, and not to be fabricated: code link and photos for Hand Signal Classification, thesis topic, screenshots of install-from-video.
 
 ## Product Principles
 

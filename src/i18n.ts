@@ -15,7 +15,7 @@ export const joinList = (locale: Locale, items: string[]) => items.join(locale =
 
 export const dir = (locale: Locale) => (locale === 'ar' ? 'rtl' : 'ltr');
 
-/** localePath('ar', 'projects/jobpilot') -> '/ar/projects/jobpilot/' */
+/** localePath('ar', 'projects/sada') -> '/ar/projects/sada/' */
 export const localePath = (locale: Locale, path = '') =>
   (locale === defaultLocale ? '/' : `/${locale}/`) + (path ? `${path}/` : '');
 
