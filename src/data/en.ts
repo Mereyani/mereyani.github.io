@@ -5,7 +5,7 @@ export default {
   meta: {
     title: 'Mohamed Mereyani — Computer Engineer',
     description:
-      'Computer engineer working on hospital information systems, databases and applied AI. M.Sc. student at Siirt University, with projects in medical image classification and LLM agents.',
+      'Computer engineer working on hospital information systems, databases and applied AI. M.Sc. student at Siirt University, with projects in medical image classification and AI tools.',
   },
   title: 'Computer Engineer',
   tagline:
@@ -21,7 +21,7 @@ export default {
   about: [
     "I'm a computer engineer based in Turkey. I'm in the first year of a thesis-based M.Sc. in Computer Engineering at Siirt University, where I completed my B.Sc. as the top-ranked student in the Faculty of Engineering.",
     'For almost two years I worked at Sinerji Bilişim on Bizmed HBYS, a hospital information system used in nearly 90 hospitals: building modules and interface features in Delphi for hospital clients, fixing bugs, and extending the Oracle database with new tables, columns and PL/SQL functions and procedures.',
-    'Most of my own projects apply machine learning to real problems: convolutional networks for medical images and hand gestures, classical models on clinical data, and more recently multi-agent tools built on large language models.',
+    'Most of my own projects apply machine learning to real problems: convolutional networks for medical images and hand gestures, classical models on clinical data, and more recently AI tools: an offline speech-to-text desktop app and a Claude Code skill.',
   ],
   experience: [
     {
@@ -54,17 +54,17 @@ export default {
     { group: 'Programming', items: ['Python', 'SQL', 'C#', 'Delphi', 'JavaScript'] },
     {
       group: 'AI & machine learning',
-      items: ['Deep learning (CNN)', 'Transfer learning (VGG16)', 'Computer vision', 'LLM agents', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
+      items: ['Deep learning (CNN)', 'Transfer learning (VGG16)', 'Computer vision', 'Speech recognition (Whisper)', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
     },
-    { group: 'Databases & backend', items: ['Oracle PL/SQL', 'PostgreSQL', 'SQLite', 'Database design', 'FastAPI'] },
-    { group: 'Systems & tools', items: ['Hospital information systems (HBYS)', 'Arduino', 'Playwright', 'Claude Code'] },
+    { group: 'Databases', items: ['Oracle PL/SQL', 'PostgreSQL', 'Database design'] },
+    { group: 'Systems & tools', items: ['Hospital information systems (HBYS)', 'Arduino', 'Claude Code'] },
   ],
   languages: [
     { name: 'Arabic', level: 'Native' },
     { name: 'Turkish', level: 'Fluent' },
-    { name: 'English', level: 'Intermediate (B1–B2)' },
+    { name: 'English', level: 'Basic to intermediate (A2–B1)' },
   ],
-  domains: { medical: 'Medical imaging', clinical: 'Clinical data', agents: 'LLM agents', hardware: 'Hardware & vision' },
+  domains: { medical: 'Medical imaging', clinical: 'Clinical data', agents: 'AI tools', hardware: 'Hardware & vision' },
   cv: {
     label: 'CV',
     summary:

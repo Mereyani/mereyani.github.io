@@ -5,7 +5,7 @@ export default {
   meta: {
     title: 'Mohamed Mereyani — Bilgisayar Mühendisi',
     description:
-      "Hastane bilgi sistemleri, veritabanları ve uygulamalı yapay zekâ üzerine çalışan bilgisayar mühendisi. Siirt Üniversitesi'nde yüksek lisans öğrencisi; tıbbi görüntü sınıflandırma ve LLM ajanları üzerine projeler.",
+      "Hastane bilgi sistemleri, veritabanları ve uygulamalı yapay zekâ üzerine çalışan bilgisayar mühendisi. Siirt Üniversitesi'nde yüksek lisans öğrencisi; tıbbi görüntü sınıflandırma ve yapay zekâ araçları üzerine projeler.",
   },
   title: 'Bilgisayar Mühendisi',
   tagline:
@@ -21,7 +21,7 @@ export default {
   about: [
     "Türkiye'de yaşayan bir bilgisayar mühendisiyim. Siirt Üniversitesi'nde tezli Bilgisayar Mühendisliği yüksek lisansının ilk yılındayım; lisansımı da aynı üniversitede Mühendislik Fakültesi birincisi olarak tamamladım.",
     'Yaklaşık iki yıl boyunca Sinerji Bilişim\'de, yaklaşık 90 hastanede kullanılan Bizmed HBYS üzerinde çalıştım: hastane müşterilerinin talepleri doğrultusunda Delphi ile modüller ve arayüz özellikleri geliştirdim, hataları giderdim ve Oracle veritabanını yeni tablolar, alanlar ve PL/SQL fonksiyon ve prosedürleriyle genişlettim.',
-    'Kendi projelerimin çoğu makine öğrenmesini gerçek problemlere uyguluyor: tıbbi görüntüler ve el hareketleri için evrişimli sinir ağları, klinik veriler üzerinde klasik modeller ve son dönemde büyük dil modelleri üzerine kurulu çok ajanlı araçlar.',
+    'Kendi projelerimin çoğu makine öğrenmesini gerçek problemlere uyguluyor: tıbbi görüntüler ve el hareketleri için evrişimli sinir ağları, klinik veriler üzerinde klasik modeller ve son dönemde yapay zekâ araçları: çevrimdışı çalışan bir konuşmadan metne masaüstü uygulaması ve bir Claude Code becerisi.',
   ],
   experience: [
     {
@@ -54,17 +54,17 @@ export default {
     { group: 'Programlama', items: ['Python', 'SQL', 'C#', 'Delphi', 'JavaScript'] },
     {
       group: 'Yapay zekâ ve makine öğrenmesi',
-      items: ['Derin öğrenme (CNN)', 'Transfer öğrenme (VGG16)', 'Bilgisayarlı görü', 'LLM ajanları', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
+      items: ['Derin öğrenme (CNN)', 'Transfer öğrenme (VGG16)', 'Bilgisayarlı görü', 'Konuşma tanıma (Whisper)', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
     },
-    { group: 'Veritabanı ve backend', items: ['Oracle PL/SQL', 'PostgreSQL', 'SQLite', 'Veritabanı tasarımı', 'FastAPI'] },
-    { group: 'Sistemler ve araçlar', items: ['Hastane bilgi yönetim sistemleri (HBYS)', 'Arduino', 'Playwright', 'Claude Code'] },
+    { group: 'Veritabanı', items: ['Oracle PL/SQL', 'PostgreSQL', 'Veritabanı tasarımı'] },
+    { group: 'Sistemler ve araçlar', items: ['Hastane bilgi yönetim sistemleri (HBYS)', 'Arduino', 'Claude Code'] },
   ],
   languages: [
     { name: 'Arapça', level: 'Ana dil' },
     { name: 'Türkçe', level: 'İleri' },
-    { name: 'İngilizce', level: 'Orta (B1–B2)' },
+    { name: 'İngilizce', level: 'Temelden orta düzeye (A2–B1)' },
   ],
-  domains: { medical: 'Tıbbi görüntüleme', clinical: 'Klinik veri', agents: 'LLM ajanları', hardware: 'Donanım ve görü' },
+  domains: { medical: 'Tıbbi görüntüleme', clinical: 'Klinik veri', agents: 'Yapay zekâ araçları', hardware: 'Donanım ve görü' },
   cv: {
     label: 'Özgeçmiş',
     summary:

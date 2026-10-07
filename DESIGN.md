@@ -251,7 +251,7 @@ Each project has a `domain` in `src/content/projects.yaml` that sets `--d` / `--
 |---|---|---|
 | medical (medical imaging) | #0f766e | #2dd4bf |
 | clinical (clinical data) | #be123c | #fb7185 |
-| agents (LLM agents) | #6d28d9 | #a78bfa |
+| agents (AI tools) | #6d28d9 | #a78bfa |
 | hardware (hardware & vision) | #92400e | #fbbf24 |
 
 Used for the domain label (dot + text), tech tags, row title hover, thumbnail ring, key-result rules and the sidebar legend. Tag text on its tint is ≥4.6:1 in light mode. The page ground stays neutral; teal `--accent` still marks links, the active nav line and focus.
