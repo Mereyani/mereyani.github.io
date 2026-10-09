@@ -28,7 +28,7 @@ export default {
       period: '07/2024 — 04/2026',
       role: 'Yazılım ve Veritabanı Uzmanı',
       org: 'Sinerji Bilişim (Bizmed)',
-      where: 'Uzaktan',
+      where: 'Hibrit (ofis ve uzaktan)',
       points: [
         'Bizmed HBYS\'nin birçok bölümünde hastane müşterilerinin taleplerini karşıladım: hataları giderdim, Delphi ile yeni özellikler, modüller ve arayüz bileşenleri ekledim.',
         'Bu özelliklerin dayandığı Oracle veritabanını genişlettim: tablolar, alanlar ve PL/SQL fonksiyonları ekledim; mevcut fonksiyon ve prosedürleri düzenledim.',

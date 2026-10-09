@@ -28,7 +28,7 @@ export default {
       period: '07/2024 — 04/2026',
       role: 'Software & Database Specialist',
       org: 'Sinerji Bilişim (Bizmed)',
-      where: 'Remote',
+      where: 'Hybrid (office and remote)',
       points: [
         'Delivered hospital client requests across several departments of Bizmed HBYS: fixed bugs and added features, modules and interface controls in Delphi.',
         'Extended the Oracle database behind these features: added tables, columns and PL/SQL functions, and modified existing functions and procedures.',
