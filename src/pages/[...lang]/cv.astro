@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 import LangSwitch from '../../components/LangSwitch.astro';
-import { dicts, joinList, localeParams, localePath, type Locale } from '../../i18n';
+import { dicts, localeParams, localePath, type Locale } from '../../i18n';
 import { getProjects } from '../../lib/projects';
 import { site } from '../../data/site';
 
@@ -21,6 +21,11 @@ const priv = process.env.CV_PRIVATE ? privateFile : undefined;
 
 const bare = (url: string) => url.replace(/^https:\/\/(www\.)?/, '');
 const pdf = `/cv/Mohamed-Mereyani-CV-${locale.toUpperCase()}.pdf`;
+
+// Key figures (98.2%, %98,2) get weight; the text itself is the site's own copy.
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const figures = (s: string) => esc(s).replace(/(%\d+[.,]\d+|\d+[.,]\d+%)/g, '<strong>$1</strong>');
+const [liHead, liTail] = bare(site.linkedin).split('/in/');
 ---
 
 <Layout locale={locale} path="cv" title={t.cv.label} description={t.cv.summary}>
@@ -33,104 +38,122 @@ const pdf = `/cv/Mohamed-Mereyani-CV-${locale.toUpperCase()}.pdf`;
 
     <main id="content">
       <article class="cv">
-        <header>
+        <header class="cv-top">
           <h1>{t.name}</h1>
           {t.name !== site.name && <p class="cv-alt"><bdi lang="en">{site.name}</bdi></p>}
           <p class="cv-title">{t.title}</p>
-          <ul class="cv-contact">
-            <li><Icon name="pin" />{t.cv.location}</li>
-            <li><Icon name="mail" /><a href={`mailto:${site.email}`}>{site.email}</a></li>
-            {priv && <li><Icon name="phone" /><bdi dir="ltr">{priv.phone}</bdi></li>}
-            <li><Icon name="globe" /><a href={site.url}>{bare(site.url)}</a></li>
-            <li><Icon name="linkedin" /><a href={site.linkedin}>{bare(site.linkedin)}</a></li>
-            <li><Icon name="github" /><a href={site.github}>{bare(site.github)}</a></li>
-            <li><Icon name="kaggle" /><a href={site.kaggle}>{bare(site.kaggle)}</a></li>
-          </ul>
         </header>
 
-        <section>
-          <h2>{t.cv.profile}</h2>
-          <p>{t.cv.summary}</p>
-        </section>
+        <aside class="cv-side">
+          <section>
+            <h2>{t.nav.contact}</h2>
+            <ul class="cv-contact">
+              <li><Icon name="pin" />{t.cv.location}</li>
+              <li><Icon name="mail" /><a href={`mailto:${site.email}`}>{site.email}</a></li>
+              {priv && <li><Icon name="phone" /><bdi dir="ltr">{priv.phone}</bdi></li>}
+              <li><Icon name="globe" /><a href={site.url}>{bare(site.url)}</a></li>
+              <li><Icon name="linkedin" /><a href={site.linkedin}>{liHead}/in/<wbr />{liTail}</a></li>
+              <li><Icon name="github" /><a href={site.github}>{bare(site.github)}</a></li>
+              <li><Icon name="kaggle" /><a href={site.kaggle}>{bare(site.kaggle)}</a></li>
+            </ul>
+          </section>
 
-        <section>
-          <h2>{t.nav.experience}</h2>
-          {
-            t.experience.map((job) => (
-              <div class="cv-item">
-                <div class="cv-head">
-                  <h3>{job.role}</h3>
-                  <p class="cv-when">{job.period}</p>
-                </div>
-                <p class="cv-meta">{job.org} · {job.where}</p>
-                <ul class="cv-points">{job.points.map((p) => <li>{p}</li>)}</ul>
-              </div>
-            ))
-          }
-        </section>
-
-        <section>
-          <h2>{t.nav.projects}</h2>
-          {
-            projects.map((p) => (
-              <div class="cv-item">
-                <div class="cv-head">
-                  <h3><a href={new URL(localePath(locale, `projects/${p.slug}`), site.url).href}>{p.text.data.title}</a></h3>
-                  <p class="cv-tags" dir="ltr">{p.tags.join(', ')}</p>
-                </div>
-                <p>{p.text.data.cv ?? p.text.data.summary}</p>
-              </div>
-            ))
-          }
-        </section>
-
-        <section>
-          <h2>{t.nav.education}</h2>
-          {
-            t.education.map((e) => (
-              <div class="cv-item">
-                <div class="cv-head">
-                  <h3>{e.degree}</h3>
-                  <p class="cv-when">{e.period}</p>
-                </div>
-                <p><span class="cv-meta">{e.org}</span> · {e.notes.join(' · ')}</p>
-              </div>
-            ))
-          }
-        </section>
-
-        <section>
-          <h2>{t.nav.skills}</h2>
-          <dl class="cv-skills">
+          <section>
+            <h2>{t.nav.skills}</h2>
             {
               t.skills.map((s) => (
-                <>
-                  <dt>{s.group}</dt>
-                  <dd>{joinList(locale, s.items)}</dd>
-                </>
+                <div class="cv-group">
+                  <h3>{s.group}</h3>
+                  <ul class="cv-chips">{s.items.map((i) => <li>{i}</li>)}</ul>
+                </div>
               ))
             }
-            <dt>{t.ui.languages}</dt>
-            <dd>{t.languages.map((l) => `${l.name}: ${l.level}`).join(' · ')}</dd>
-          </dl>
-        </section>
+          </section>
 
-        {
-          priv && (
-            <section>
-              <h2>{t.cv.references}</h2>
-              <div class="cv-refs">
-                {priv.references[locale].map((r) => (
-                  <p>
-                    <strong>{r.name}</strong> · {r.role} ·{' '}
-                    {r.phone && <><bdi dir="ltr">{r.phone}</bdi> · </>}
-                    <a href={`mailto:${r.email}`}><bdi dir="ltr">{r.email}</bdi></a>
-                  </p>
-                ))}
-              </div>
-            </section>
-          )
-        }
+          <section>
+            <h2>{t.ui.languages}</h2>
+            <dl class="cv-langs">
+              {
+                t.languages.map((l) => (
+                  <>
+                    <dt>{l.name}</dt>
+                    <dd>{l.level}</dd>
+                  </>
+                ))
+              }
+            </dl>
+          </section>
+
+          {
+            priv && (
+              <section>
+                <h2>{t.cv.references}</h2>
+                <div class="cv-refs">
+                  {priv.references[locale].map((r) => (
+                    <p>
+                      <strong>{r.name}</strong>
+                      <span>{r.role}</span>
+                      {r.phone && <bdi dir="ltr">{r.phone}</bdi>}
+                      <a href={`mailto:${r.email}`}><bdi dir="ltr">{r.email}</bdi></a>
+                    </p>
+                  ))}
+                </div>
+              </section>
+            )
+          }
+        </aside>
+
+        <div class="cv-main">
+          <section>
+            <h2>{t.cv.profile}</h2>
+            <p set:html={figures(t.cv.summary)} />
+          </section>
+
+          <section>
+            <h2>{t.nav.experience}</h2>
+            {
+              t.experience.map((job) => (
+                <div class="cv-item">
+                  <div class="cv-head">
+                    <h3>{job.role}</h3>
+                    <p class="cv-when"><bdi dir="ltr">{job.period}</bdi></p>
+                  </div>
+                  <p class="cv-meta">{job.org} · {job.where}</p>
+                  <ul class="cv-points">{job.points.map((p) => <li>{p}</li>)}</ul>
+                </div>
+              ))
+            }
+          </section>
+
+          <section>
+            <h2>{t.nav.projects}</h2>
+            {
+              projects.map((p) => (
+                <div class="cv-item cv-proj">
+                  <h3><a href={new URL(localePath(locale, `projects/${p.slug}`), site.url).href}>{p.text.data.title}</a></h3>
+                  <p class="cv-tags"><bdi dir="ltr">{p.tags.join(' · ')}</bdi></p>
+                  <p set:html={figures(p.text.data.cv ?? p.text.data.summary)} />
+                </div>
+              ))
+            }
+          </section>
+
+          <section>
+            <h2>{t.nav.education}</h2>
+            {
+              t.education.map((e) => (
+                <div class="cv-item">
+                  <div class="cv-head">
+                    <h3>{e.degree}</h3>
+                    <p class="cv-when"><bdi dir="ltr">{e.period}</bdi></p>
+                  </div>
+                  <p class="cv-meta">{e.org}</p>
+                  <p>{e.notes.join(' · ')}</p>
+                </div>
+              ))
+            }
+          </section>
+        </div>
       </article>
     </main>
   </div>

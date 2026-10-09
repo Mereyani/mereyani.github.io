@@ -262,3 +262,14 @@ Motion, all disabled or reduced under `prefers-reduced-motion`:
 - Project rows rise in once with a scroll-driven `view()` timeline (filter, not opacity, so hover dimming still works). Keep `animation-timeline` in its own rule: the minifier folds it into the shorthand otherwise.
 - Hovering or focusing a legend chip dims the other domains' rows (pure CSS `:has`).
 
+
+## The CV sheet (2026-10-09)
+
+The CV pages (`/cv/`, `/ar/cv/`, `/tr/cv/`) are a print document, not a page of the site, and the owner asked for them to look like a finished CV. They are the one surface that departs from the neutral ground and the One Teal Rule:
+
+- **Layout:** a 62mm navy column (`--cv-navy` #10243f) with contact, skills as outlined pills and languages, beside the record (profile, experience, projects, education) under the name. One A4 page per language; Arabic mirrors because the grid follows `dir`. Below 48rem the column becomes a band under the name.
+- **Teal:** here teal also marks section heads, the role line and the employer line. It never fills a surface.
+- **Reading order:** the markup runs name, contact, skills, languages, then the record. The side column is placed by the grid, so ATS parsers read it top-down.
+- **ATS rules kept:** no letter-spacing on headings (it extracts as "E X P E R I E N C E"), no new Arabic face (IBM Plex Sans Arabic only), no text inside images.
+- **Page gate:** `npm run cv` prints each page with headless Chrome through the named `@page cv` (no margin, so the column bleeds) and fails unless every PDF is exactly one page. The private build adds phone and referees in the side column and must also fit.
+- **Sizes** are in `pt` for print and `rem` on screen. The name (1.875rem) and the pill and meta sizes are intentional steps outside the site's type ramp.
