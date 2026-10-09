@@ -268,6 +268,44 @@ dl {
   margin-top: 2rem;
 }
 
+.id-cta {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.cv-btn {
+  padding: 0.625rem 1rem;
+  border-radius: 0.375rem;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 0.875rem;
+  font-weight: 550;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.cv-btn:hover {
+  background: var(--accent);
+}
+
+.id-mail {
+  padding-block: 0.25rem;
+  color: var(--fg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration-color: var(--line);
+  text-underline-offset: 0.22em;
+  overflow-wrap: anywhere;
+  transition: text-decoration-color 0.2s;
+}
+
+.id-mail:hover {
+  text-decoration-color: var(--accent);
+}
+
 .socials {
   display: flex;
   gap: 1rem;
@@ -750,6 +788,7 @@ html:not([lang='ar']) [lang='ar'] {
 
   .id-foot {
     margin-top: auto;
+    padding-top: 1.5rem;
   }
 
   .shell > main {
@@ -1079,21 +1118,6 @@ article h1 {
 }
 
 /* CV: one A4 page. Screen shows the sheet; print and PDF use @page. */
-.cv-link {
-  display: inline-block;
-  padding: 0.25rem;
-  margin-inline: -0.25rem;
-  color: var(--fg);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  text-decoration-color: var(--line);
-  transition: text-decoration-color 0.2s;
-}
-
-.cv-link:hover {
-  text-decoration-color: var(--accent);
-}
-
 .cv-page {
   padding: 2rem var(--gutter) 4rem;
 }
@@ -1536,5 +1560,16 @@ body:lang(ar) .cv {
 
   .cv-item + .cv-item {
     margin-top: 0.5rem;
+  }
+}
+
+/* Short laptop screens: the identity column must still fit its CV button and links. */
+@media (min-width: 64rem) and (max-height: 48rem) {
+  .id {
+    padding-block: 2.5rem;
+  }
+
+  .toc {
+    margin-top: 1.5rem;
   }
 }
