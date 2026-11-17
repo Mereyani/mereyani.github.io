@@ -13,7 +13,7 @@ const { locale } = Astro.props as { locale: Locale };
 const t = dicts[locale];
 const projects = await getProjects(locale);
 const sections = ['about', 'experience', 'projects', 'education', 'skills'] as const;
-const domains = ['medical', 'clinical', 'agents', 'hardware'] as const;
+const domains = ['medical', 'security', 'clinical', 'agents', 'hardware'] as const;
 
 const jsonld = {
   '@context': 'https://schema.org',

@@ -50,6 +50,11 @@
   --d-bg: rgb(180 83 9 / 0.1);
 }
 
+[data-domain='security'] {
+  --d: #1d4ed8;
+  --d-bg: rgb(29 78 216 / 0.08);
+}
+
 @media (prefers-color-scheme: dark) {
   [data-domain='medical'] {
     --d: #2dd4bf;
@@ -69,6 +74,11 @@
   [data-domain='hardware'] {
     --d: #fbbf24;
     --d-bg: rgb(251 191 36 / 0.12);
+  }
+
+  [data-domain='security'] {
+    --d: #60a5fa;
+    --d-bg: rgb(96 165 250 / 0.12);
   }
 }
 
@@ -832,6 +842,10 @@ html:not([lang='ar']) [lang='ar'] {
     opacity: 0.3;
   }
 
+  .shell:has(.legend [data-domain='security']:is(:hover, :focus-visible)) .rows.linked .row:not([data-domain='security']) {
+    opacity: 0.3;
+  }
+
   .rows.linked .row:hover,
   .rows.linked .row:focus-within {
     opacity: 1;
@@ -1142,22 +1156,29 @@ article h1 {
   text-decoration: none;
 }
 
-/* The sheet. Navy side column, teal section heads, one A4 page. The markup order is name, contact,
-   skills, then the record, so ATS parsers read it top-down; the side column is placed by the grid. */
+/* The sheet. ATS format: one column in reading order, standard section names, plain text
+   separators, no icons, no photo. It stays white paper in both themes, as it prints. */
 .cv {
-  --cv-navy: #10243f;
-  --cv-side-fg: #eef3fa;
-  --cv-side-dim: #a9bbd4;
-  display: grid;
-  grid-template-columns: 62mm minmax(0, 1fr);
-  grid-template-rows: auto 1fr;
+  --surface: #ffffff;
+  --fg: #111827;
+  --muted: #374151;
+  --faint: #4b5563;
+  --line: #d1d5db;
+  --accent: #0f4c5c;
+  /* A standard face whose text layer extracts cleanly in ATS parsers, Arabic included. */
+  /* Arial covers Arabic on Windows; on macOS Arabic falls back to IBM Plex Sans Arabic (see DESIGN.md). */
+  --cv-font: Arial, 'Helvetica Neue', Helvetica, 'IBM Plex Sans Arabic', 'Liberation Sans', sans-serif;
+  color-scheme: light;
   max-width: 210mm;
   min-height: 297mm;
   margin-inline: auto;
+  padding: 14mm 15mm 12mm;
   background: var(--surface);
   box-shadow: inset 0 0 0 1px var(--line);
-  font-size: 0.8125rem;
-  line-height: 1.5;
+  color: var(--fg);
+  font-family: var(--cv-font);
+  font-size: 0.875rem;
+  line-height: 1.45;
 }
 
 .cv a {
@@ -1165,183 +1186,75 @@ article h1 {
   text-decoration: none;
 }
 
-.cv strong {
-  color: var(--fg);
-  font-weight: 650;
-}
-
-.cv h2,
-.cv h3 {
-  text-wrap: balance;
-}
-
-/* Identity */
-.cv-top {
-  grid-column: 2;
-  grid-row: 1;
-  margin-inline: 10mm;
-  padding-block: 10mm 4mm;
-  border-bottom: 2px solid var(--accent);
-}
-
-.cv h1 {
-  font-size: 1.875rem;
-  font-weight: 650;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-}
-
-.cv-alt {
-  margin-top: 0.125rem;
-  color: var(--faint);
-}
-
-.cv-title {
-  margin-top: 0.375rem;
-  color: var(--accent);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-/* Side column */
-.cv-side {
-  grid-column: 1;
-  grid-row: 1 / -1;
-  padding: 10mm 6.5mm;
-  background: var(--cv-navy);
-  color: var(--cv-side-fg);
-}
-
-.cv-side section + section {
-  margin-top: 1.25rem;
-}
-
-.cv-side h2 {
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 1px solid rgb(255 255 255 / 0.18);
-  color: var(--cv-side-dim);
-  font-size: 0.6875rem;
-  font-weight: 650;
-  text-transform: uppercase;
-}
-
-.cv-contact {
-  display: grid;
-  gap: 0.375rem;
-  list-style: none;
-  padding: 0;
-}
-
-.cv-contact li {
-  display: grid;
-  grid-template-columns: 0.875rem minmax(0, 1fr);
-  align-items: start;
-  gap: 0.4rem;
-  font-weight: 500;
-  overflow-wrap: anywhere;
-}
-
-.cv-contact .icon {
-  width: 0.875rem;
-  height: 0.875rem;
-  margin-top: 0.15rem;
-  color: var(--cv-side-dim);
-}
-
-.cv-contact a:hover {
+.cv a:hover {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
 
-.cv-group + .cv-group {
-  margin-top: 0.625rem;
-}
-
-.cv-side h3 {
-  margin-bottom: 0.25rem;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 650;
-}
-
-.cv-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  list-style: none;
-  padding: 0;
-}
-
-.cv-chips li {
-  padding: 0.05rem 0.5rem;
-  border-radius: 99rem;
-  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.2);
-  font-size: 0.6875rem;
-}
-
-.cv-langs {
-  display: grid;
-  gap: 0.375rem;
-}
-
-.cv-langs dt {
-  font-weight: 600;
-}
-
-.cv-langs dd {
-  margin: 0;
-  color: var(--cv-side-dim);
-  font-size: 0.75rem;
-}
-
-.cv-refs {
-  display: grid;
-  gap: 0.625rem;
-  overflow-wrap: anywhere;
-}
-
-.cv-refs p {
-  display: grid;
-  gap: 0.05rem;
-  font-size: 0.75rem;
-}
-
-.cv-refs strong {
-  color: #fff;
-}
-
-.cv-refs span {
-  color: var(--cv-side-dim);
-}
-
-/* Record */
-.cv-main {
-  grid-column: 2;
-  grid-row: 2;
-  padding: 0.25rem 10mm 8mm;
-}
-
-.cv-main section {
-  margin-top: 1rem;
-}
-
-.cv-main h2 {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-  font-size: 0.75rem;
+.cv strong {
   font-weight: 700;
+}
+
+/* Identity: name, title, then one plain-text contact line. */
+.cv-top {
+  padding-bottom: 0.625rem;
+  border-bottom: 1.5px solid var(--fg);
+  text-align: center;
+}
+
+.cv h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.cv-alt {
+  color: var(--faint);
+}
+
+.cv-title {
+  margin-top: 0.25rem;
+  color: var(--accent);
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.cv-contact {
+  margin-top: 0.375rem;
+  color: var(--muted);
+}
+
+/* Each item stays whole; lines break only at the separators. */
+.cv-contact > a,
+.cv-contact > span {
+  white-space: nowrap;
+}
+
+.cv-contact > .cv-sep {
+  color: var(--line);
+  white-space: normal;
+}
+
+/* Sections */
+.cv section {
+  margin-top: 0.875rem;
+}
+
+.cv h2 {
+  margin-bottom: 0.375rem;
+  padding-bottom: 0.125rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
-.cv-main h2::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--line);
+.cv h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .cv-item + .cv-item {
@@ -1356,81 +1269,66 @@ article h1 {
   gap: 0 1rem;
 }
 
-.cv-main h3 {
-  font-size: 0.875rem;
-  font-weight: 650;
-}
-
-.cv-main h3 a:hover {
-  color: var(--accent);
+.cv-head > h3 {
+  flex: 1 1 20rem;
 }
 
 .cv-meta {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.cv-when,
-.cv-tags {
-  color: var(--faint);
-  font-family: var(--mono);
-  font-size: 0.6875rem;
-  font-weight: 400;
+  color: var(--muted);
+  font-style: italic;
 }
 
 .cv-when {
+  color: var(--muted);
+  font-weight: 700;
   white-space: nowrap;
 }
 
 .cv-tags {
-  margin-block: 0.05rem 0.125rem;
-}
-
-.cv-proj {
-  padding-inline-start: 0.75rem;
-  border-inline-start: 1px solid var(--line);
+  color: var(--faint);
+  font-weight: 400;
 }
 
 .cv-points {
   display: grid;
   gap: 0.125rem;
-  margin-top: 0.25rem;
-  padding-inline-start: 1rem;
+  margin-top: 0.125rem;
+  padding-inline-start: 1.125rem;
+}
+
+.cv-lines {
+  display: grid;
+  gap: 0.125rem;
+  list-style: none;
+  padding: 0;
 }
 
 body:lang(ar) .cv {
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-:lang(ar) .cv h1,
 :lang(ar) .cv h2 {
-  letter-spacing: 0;
-}
-
-:lang(ar) .cv-side h2,
-:lang(ar) .cv-main h2 {
-  font-size: 0.8125rem;
   text-transform: none;
 }
 
-/* Phones: the side column becomes a band under the name. */
-@media (max-width: 48rem) {
+/* Phones: same order, smaller margins. Screen only: the A4 print width is under 48rem too. */
+@media screen and (max-width: 48rem) {
   .cv {
-    display: block;
     min-height: 0;
+    padding: 1.5rem 1.25rem;
   }
 
-  .cv-top {
-    margin-inline: 1.25rem;
-    padding-block: 1.5rem 1rem;
+  .cv-head {
+    flex-direction: column;
   }
 
-  .cv-side {
-    padding: 1.25rem;
+  .cv-head > h3 {
+    flex: none;
   }
 
-  .cv-main {
-    padding: 0.25rem 1.25rem 1.5rem;
+  /* The LinkedIn address is the longest unbreakable item. */
+  .cv-contact {
+    font-size: 0.75rem;
   }
 }
 
@@ -1450,11 +1348,6 @@ body:lang(ar) .cv {
   :root {
     --bg: #ffffff;
     --surface: #ffffff;
-    --fg: #0f172a;
-    --muted: #334155;
-    --faint: #475569;
-    --line: #d4d4d4;
-    --accent: #0f766e;
   }
 
   body {
@@ -1472,94 +1365,45 @@ body:lang(ar) .cv {
   }
 
   .cv {
-    display: grid;
     width: 210mm;
     max-width: none;
-    height: 296.5mm;
     min-height: 0;
+    padding: 9mm 13mm 6mm;
     box-shadow: none;
-    font-size: 9pt;
-    line-height: 1.42;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
-
-  .cv-top {
-    margin-inline: 10mm;
-    padding-block: 9mm 3.5mm;
-  }
-
-  .cv-side {
-    padding: 9mm 6.5mm;
-  }
-
-  .cv-main {
-    padding: 0 10mm 6mm;
+    font-size: 9.2pt;
+    line-height: 1.3;
   }
 
   .cv h1 {
-    font-size: 26pt;
+    font-size: 20pt;
   }
 
   .cv-title {
+    font-size: 11pt;
+  }
+
+  .cv h2 {
     font-size: 10pt;
   }
 
-  /* Letter-spaced caps extract as "E X P E R I E N C E" in ATS parsers, so no tracking. */
-  .cv-side h2,
-  .cv-main h2 {
-    font-size: 8pt;
-    letter-spacing: 0;
-  }
-
-  .cv-main h3 {
+  .cv h3 {
     font-size: 9.8pt;
   }
 
-  .cv-side h3 {
-    font-size: 7.8pt;
-  }
-
-  .cv-chips li,
-  .cv-langs dd {
-    font-size: 7.5pt;
-  }
-
-  .cv-when,
-  .cv-tags,
-  .cv-refs p {
-    font-size: 7.7pt;
-  }
-
-  .cv-contact li {
-    font-size: 8.3pt;
-  }
-
-  .cv-main h3 a {
-    text-decoration: underline;
-    text-decoration-color: var(--line);
-    text-underline-offset: 0.2em;
-  }
-
   body:lang(ar) .cv {
-    font-size: 8.9pt;
-    line-height: 1.5;
+    line-height: 1.36;
+  }
+
+  .cv section {
+    margin-top: 0.5rem;
   }
 
   .cv-item {
     break-inside: avoid;
   }
 
-  .cv-main section {
-    margin-top: 0.75rem;
-  }
-
-  .cv-side section + section {
-    margin-top: 0.9rem;
-  }
-
   .cv-item + .cv-item {
-    margin-top: 0.5rem;
+    margin-top: 0.35rem;
   }
 }
 

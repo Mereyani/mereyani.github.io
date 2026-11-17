@@ -253,6 +253,7 @@ Each project has a `domain` in `src/content/projects.yaml` that sets `--d` / `--
 | clinical (clinical data) | #be123c | #fb7185 |
 | agents (AI tools) | #6d28d9 | #a78bfa |
 | hardware (hardware & vision) | #92400e | #fbbf24 |
+| security (IoT security) | #1d4ed8 | #60a5fa |
 
 Used for the domain label (dot + text), tech tags, row title hover, thumbnail ring, key-result rules and the sidebar legend. Tag text on its tint is ≥4.6:1 in light mode. The page ground stays neutral; teal `--accent` still marks links, the active nav line and focus.
 
@@ -263,13 +264,13 @@ Motion, all disabled or reduced under `prefers-reduced-motion`:
 - Hovering or focusing a legend chip dims the other domains' rows (pure CSS `:has`).
 
 
-## The CV sheet (2026-10-09)
+## The CV sheet (2026-11-17, ATS format)
 
-The CV pages (`/cv/`, `/ar/cv/`, `/tr/cv/`) are a print document, not a page of the site, and the owner asked for them to look like a finished CV. They are the one surface that departs from the neutral ground and the One Teal Rule:
+The CV pages (`/cv/`, `/ar/cv/`, `/tr/cv/`) are a print document, not a page of the site. On 2026-11-17 the owner asked for the standard ATS format, which replaced the navy two-column sheet of 2026-10-09 (its sidebar was read before the name and, in layout-based parsers, mixed line by line with the main column).
 
-- **Layout:** a 62mm navy column (`--cv-navy` #10243f) with contact, skills as outlined pills and languages, beside the record (profile, experience, projects, education) under the name. One A4 page per language; Arabic mirrors because the grid follows `dir`. Below 48rem the column becomes a band under the name.
-- **Teal:** here teal also marks section heads, the role line and the employer line. It never fills a surface.
-- **Reading order:** the markup runs name, contact, skills, languages, then the record. The side column is placed by the grid, so ATS parsers read it top-down.
-- **ATS rules kept:** no letter-spacing on headings (it extracts as "E X P E R I E N C E"), no new Arabic face (IBM Plex Sans Arabic only), no text inside images.
-- **Page gate:** `npm run cv` prints each page with headless Chrome through the named `@page cv` (no margin, so the column bleeds) and fails unless every PDF is exactly one page. The private build adds phone and referees in the side column and must also fit.
-- **Sizes** are in `pt` for print and `rem` on screen. The name (1.875rem) and the pill and meta sizes are intentional steps outside the site's type ramp.
+- **Layout:** one column in reading order. Name, title, then one plain-text contact line (location | email | phone in the private build | site | LinkedIn | GitHub). No photo, no icons, no pills, no tables.
+- **Section order (owner's):** Profile, Education, Professional Experience, Research & Publications, Projects, Skills, Languages, References (private build only). No Certificates or Courses sections (owner's decision, 2026-11-17). A project whose repository is already listed under Research is not repeated under Projects.
+- **Paper:** the sheet stays white in dark mode too, as it prints. Teal-navy `#0f4c5c` marks the title and section heads only.
+- **Face:** Arial (standard, clean text layer; covers Arabic on Windows), falling back to IBM Plex Sans Arabic for Arabic on macOS, whose Arial has no Arabic. Check the text layer after any font change: `pdftotext -enc UTF-8 public/cv/Mohamed-Mereyani-CV-AR.pdf -` (poppler) and, on macOS, `scripts/pdf-text.js`.
+- **ATS rules kept:** no letter-spacing on headings, plain `|` separators, dates on the entry's first line, standard section names.
+- **Page gate:** `npm run cv` (macOS, Windows or Linux; set `CHROME` if the browser is elsewhere) prints each page with headless Chrome and fails unless every PDF is exactly one A4 page. The private build adds phone and referees and must also fit.

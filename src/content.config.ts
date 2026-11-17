@@ -8,7 +8,7 @@ const projects = defineCollection({
   schema: ({ image }) =>
     z.object({
       order: z.number(), // lower comes first
-      domain: z.enum(['medical', 'clinical', 'agents', 'hardware']), // sets the project's colour
+      domain: z.enum(['medical', 'clinical', 'agents', 'hardware', 'security']), // sets the project's colour
       year: z.number().optional(),
       tags: z.array(z.string()),
       github: z.url().optional(),

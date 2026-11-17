@@ -52,6 +52,7 @@ All facts come from the owner's CV (`~/Downloads/Mohamed Mereyani_CV_EN (1).pdf`
 - B.Sc. Computer Engineering, Siirt University, 2021–2025, GPA 3.56/4.00, first-rank student in the Faculty of Engineering.
 - M.Sc. Computer Engineering (thesis program, first year), Siirt University Institute of Science and Technology, 2026–present, GPA 86.75/100.
 - Software and Database Specialist, Sinerji Bilişim (Bizmed), 07/2024 – 04/2026.
+- Research: TrustFed-TinyIDS (`github.com/Mereyani/TrustFed-TinyIDS`), M.Sc. project on IoT intrusion detection; journal manuscript in preparation. All figures on the site come from its `RESULTS_SUMMARY.md`; host-level results are simulations and are presented as such.
 - Projects: Hand Signal Classification, Bone Fracture Classification (graduation project), Cataract Classification, Heart Disease Detection, install-from-video. (JobPilot was removed on 2026-10-07 at the owner's request: it did not work.)
 - Languages: Arabic (native), Turkish (fluent), English (A2–B1, per the owner on 2026-10-07).
 

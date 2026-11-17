@@ -22,6 +22,7 @@ export default {
     "Türkiye'de yaşayan bir bilgisayar mühendisiyim. Siirt Üniversitesi'nde tezli Bilgisayar Mühendisliği yüksek lisansının ilk yılındayım; lisansımı da aynı üniversitede Mühendislik Fakültesi birincisi olarak tamamladım.",
     'Yaklaşık iki yıl boyunca Sinerji Bilişim\'de, yaklaşık 90 hastanede kullanılan Bizmed HBYS üzerinde çalıştım: hastane müşterilerinin talepleri doğrultusunda Delphi ile modüller ve arayüz özellikleri geliştirdim, hataları giderdim ve Oracle veritabanını yeni tablolar, alanlar ve PL/SQL fonksiyon ve prosedürleriyle genişlettim.',
     'Kendi projelerimin çoğu makine öğrenmesini gerçek problemlere uyguluyor: tıbbi görüntüler ve el hareketleri için evrişimli sinir ağları, klinik veriler üzerinde klasik modeller ve son dönemde yapay zekâ araçları: çevrimdışı çalışan bir konuşmadan metne masaüstü uygulaması ve bir Claude Code becerisi.',
+    'Yüksek lisansta IoT ağları için saldırı tespiti üzerinde çalışıyorum: TrustFed-TinyIDS, yalnızca normal trafikle eğitilen, yanlış alarmları kalibre edilmiş, federe eğitimli ve küçük cihazlar için TinyML sürümü olan bir dedektör. Dergi makalesi hazırlık aşamasında.',
   ],
   experience: [
     {
@@ -54,7 +55,7 @@ export default {
     { group: 'Programlama', items: ['Python', 'SQL', 'C#', 'Delphi', 'JavaScript'] },
     {
       group: 'Yapay zekâ ve makine öğrenmesi',
-      items: ['Derin öğrenme (CNN)', 'Transfer öğrenme (VGG16)', 'Bilgisayarlı görü', 'Konuşma tanıma (Whisper)', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
+      items: ['Derin öğrenme (CNN)', 'Transfer öğrenme (VGG16)', 'Bilgisayarlı görü', 'Konuşma tanıma (Whisper)', 'Anomali tespiti (otokodlayıcılar)', 'Federe öğrenme', 'Konformal tahmin', 'TinyML (TFLite INT8)', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
     },
     { group: 'Veritabanı', items: ['Oracle PL/SQL', 'PostgreSQL', 'Veritabanı tasarımı'] },
     { group: 'Sistemler ve araçlar', items: ['Hastane bilgi yönetim sistemleri (HBYS)', 'Arduino', 'Claude Code'] },
@@ -64,14 +65,25 @@ export default {
     { name: 'Türkçe', level: 'İleri' },
     { name: 'İngilizce', level: 'Temelden orta düzeye (A2–B1)' },
   ],
-  domains: { medical: 'Tıbbi görüntüleme', clinical: 'Klinik veri', agents: 'Yapay zekâ araçları', hardware: 'Donanım ve görü' },
+  research: [
+    {
+      title: 'TrustFed-TinyIDS: Conformal Three-Way Decisions, Federated Training and Host-Level Evidence Accumulation for Unseen and Sparse Attacks in IoT Networks',
+      authors: 'Mohamed Mereyani',
+      status: "Dergi makalesi hazırlık aşamasında; kod GitHub'da açık",
+      year: '2026',
+      url: 'https://github.com/Mereyani/TrustFed-TinyIDS',
+    },
+  ],
+  domains: { medical: 'Tıbbi görüntüleme', clinical: 'Klinik veri', agents: 'Yapay zekâ araçları', hardware: 'Donanım ve görü', security: 'IoT güvenliği' },
   cv: {
     label: 'Özgeçmiş',
     summary:
-      'Yaklaşık 90 hastanede kullanılan Bizmed HBYS (Delphi, Oracle PL/SQL) üzerinde yaklaşık iki yıllık üretim deneyimine ve tıbbi görüntüler üzerinde uygulamalı derin öğrenme çalışmalarına sahip bir bilgisayar mühendisiyim; röntgen görüntülerinde test verisinde %98,2 doğruluğa ulaşan bir kırık sınıflandırıcısı geliştirdim. Siirt Üniversitesi Mühendislik Fakültesi birincisi olarak mezun oldum; şu anda tezli Bilgisayar Mühendisliği yüksek lisansına devam ediyorum.',
+      'Yaklaşık 90 hastanede kullanılan Bizmed HBYS (Delphi, Oracle PL/SQL) üzerinde yaklaşık iki yıllık üretim deneyimine sahip bir bilgisayar mühendisiyim. Siirt Üniversitesi Mühendislik Fakültesi birincisi olarak mezun oldum; şu anda tezli Bilgisayar Mühendisliği yüksek lisansına devam ediyorum. Uygulamalı makine öğrenmesi çalışmalarım tıbbi görüntüleri (test verisinde %98,2 doğruluğa ulaşan bir röntgen kırık sınıflandırıcısı) ve konformal kalibrasyon ile federe öğrenme kullanan IoT saldırı tespitini (dergi makalesi hazırlık aşamasında) kapsıyor.',
     download: 'PDF indir',
     profile: 'Profil',
     location: 'Türkiye',
+    experience: 'İş Deneyimi',
+    research: 'Araştırma ve Yayınlar',
     references: 'Referanslar',
   },
   ui: {

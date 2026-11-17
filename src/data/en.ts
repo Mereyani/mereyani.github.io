@@ -22,6 +22,7 @@ export default {
     "I'm a computer engineer based in Turkey. I'm in the first year of a thesis-based M.Sc. in Computer Engineering at Siirt University, where I completed my B.Sc. as the top-ranked student in the Faculty of Engineering.",
     'For almost two years I worked at Sinerji Bilişim on Bizmed HBYS, a hospital information system used in nearly 90 hospitals: building modules and interface features in Delphi for hospital clients, fixing bugs, and extending the Oracle database with new tables, columns and PL/SQL functions and procedures.',
     'Most of my own projects apply machine learning to real problems: convolutional networks for medical images and hand gestures, classical models on clinical data, and more recently AI tools: an offline speech-to-text desktop app and a Claude Code skill.',
+    'In my M.Sc. I work on intrusion detection for IoT networks: TrustFed-TinyIDS, a detector trained on normal traffic only, with calibrated false alarms, federated training and a TinyML version for small devices. A journal manuscript is in preparation.',
   ],
   experience: [
     {
@@ -54,7 +55,7 @@ export default {
     { group: 'Programming', items: ['Python', 'SQL', 'C#', 'Delphi', 'JavaScript'] },
     {
       group: 'AI & machine learning',
-      items: ['Deep learning (CNN)', 'Transfer learning (VGG16)', 'Computer vision', 'Speech recognition (Whisper)', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
+      items: ['Deep learning (CNN)', 'Transfer learning (VGG16)', 'Computer vision', 'Speech recognition (Whisper)', 'Anomaly detection (autoencoders)', 'Federated learning', 'Conformal prediction', 'TinyML (TFLite INT8)', 'TensorFlow', 'Keras', 'scikit-learn', 'Pandas', 'OpenCV'],
     },
     { group: 'Databases', items: ['Oracle PL/SQL', 'PostgreSQL', 'Database design'] },
     { group: 'Systems & tools', items: ['Hospital information systems (HBYS)', 'Arduino', 'Claude Code'] },
@@ -64,14 +65,25 @@ export default {
     { name: 'Turkish', level: 'Fluent' },
     { name: 'English', level: 'Basic to intermediate (A2–B1)' },
   ],
-  domains: { medical: 'Medical imaging', clinical: 'Clinical data', agents: 'AI tools', hardware: 'Hardware & vision' },
+  research: [
+    {
+      title: 'TrustFed-TinyIDS: Conformal Three-Way Decisions, Federated Training and Host-Level Evidence Accumulation for Unseen and Sparse Attacks in IoT Networks',
+      authors: 'Mohamed Mereyani',
+      status: 'Journal manuscript in preparation; code public on GitHub',
+      year: '2026',
+      url: 'https://github.com/Mereyani/TrustFed-TinyIDS',
+    },
+  ],
+  domains: { medical: 'Medical imaging', clinical: 'Clinical data', agents: 'AI tools', hardware: 'Hardware & vision', security: 'IoT security' },
   cv: {
     label: 'CV',
     summary:
-      'Computer engineer with almost two years of production experience on Bizmed HBYS, a hospital information system used in nearly 90 hospitals (Delphi, Oracle PL/SQL), and applied deep learning work on medical images, including an X-ray fracture classifier with 98.2% test accuracy. First-ranked graduate of Siirt University\'s Faculty of Engineering, now in a thesis-based M.Sc. in Computer Engineering.',
+      "Computer engineer with almost two years of production experience on Bizmed HBYS, a hospital information system used in nearly 90 hospitals (Delphi, Oracle PL/SQL). First-ranked graduate of Siirt University's Faculty of Engineering, now in a thesis-based M.Sc. in Computer Engineering. Applied machine learning work on medical images, including an X-ray fracture classifier with 98.2% test accuracy, and on IoT intrusion detection with conformal calibration and federated learning (journal manuscript in preparation).",
     download: 'Download PDF',
     profile: 'Profile',
     location: 'Turkey',
+    experience: 'Professional Experience',
+    research: 'Research & Publications',
     references: 'References',
   },
   ui: {

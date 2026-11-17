@@ -10,13 +10,17 @@ export interface Dict {
   education: { period: string; degree: string; org: string; notes: string[] }[];
   skills: { group: string; items: string[] }[];
   languages: { name: string; level: string }[];
-  domains: { medical: string; clinical: string; agents: string; hardware: string };
+  // CV only. An empty list hides the section.
+  research: { title: string; authors: string; status: string; year: string; url?: string }[];
+  domains: { medical: string; clinical: string; agents: string; hardware: string; security: string };
   cv: {
     label: string;
     summary: string;
     download: string;
     profile: string;
     location: string;
+    experience: string;
+    research: string;
     references: string;
   };
   ui: {

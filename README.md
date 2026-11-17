@@ -19,7 +19,7 @@ npm run preview   # serves dist/
 | What | File |
 | --- | --- |
 | Name, email, GitHub, LinkedIn | `src/data/site.ts` |
-| Title, tagline, about, experience, education, skills, languages, UI labels | `src/data/en.ts`, `ar.ts`, `tr.ts` |
+| Title, tagline, about, experience, education, skills, languages, CV-only research, UI labels | `src/data/en.ts`, `ar.ts`, `tr.ts` |
 | Project facts (order, year, tags, links, cover) | `src/content/projects.yaml` |
 | Project text per language | `src/content/projects/<slug>/<en\|ar\|tr>.md` |
 | Colours, spacing, typography | `src/styles/global.css` (tokens at the top) |
@@ -32,7 +32,7 @@ All three languages must stay in sync. `npm run build` fails if a locale file is
    ```yaml
    my-project:
      order: 3          # position in the list, lower first
-     domain: medical   # medical | clinical | agents | hardware (sets the project's colour)
+     domain: medical   # medical | clinical | agents | hardware | security (sets the project's colour)
      year: 2026        # optional
      tags: [Python, PyTorch]
      github: https://github.com/Mereyani/my-project   # optional
@@ -62,9 +62,9 @@ Edit the same fields in `src/data/en.ts`, `ar.ts` and `tr.ts`. A new job is a ne
 
 ## CV
 
-`/cv/` (and `/ar/cv/`, `/tr/cv/`) is a one-page A4 CV built from the same data as the site, so it updates with every content change. Projects use their optional `cv:` one-liner from the Markdown frontmatter.
+`/cv/` (and `/ar/cv/`, `/tr/cv/`) is a one-page A4 CV in ATS format (one column, no photo or icons) built from the same data as the site, so it updates with every content change. Projects use their optional `cv:` one-liner from the Markdown frontmatter.
 
-After changing content, regenerate the PDFs (needs Google Chrome):
+After changing content, regenerate the PDFs (needs Google Chrome or Edge, on macOS, Windows or Linux; set `CHROME` if it is elsewhere):
 
 ```bash
 npm run cv
